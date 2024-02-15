@@ -1,0 +1,41 @@
+@import '_mixins';
+
+.banner-background { // Background
+  position : relative;
+  width: 1240px;
+  height: 223px;
+  flex-shrink: 0;
+  border-radius: 25px;
+  &::before { // Overlay
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6));
+    border-radius: 25px;
+  }
+  .banner { // Image
+    width: 1240px;
+    height: 223px;
+    flex-shrink: 0;
+    border-radius: 25px;
+  }
+  h1 { // Title
+    @include center;
+    white-space: nowrap;
+    color: #FFF;
+    text-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+    -webkit-text-stroke-color: #000;
+    font-size: 48px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 142.6%; /* 68.448px */
+  }
+}
+
+// This _banner control the top image.
+// background is the background of the banner image. &:: before pseudo-element helps to create the darken effect.
+// .banner is the image itself.
+// h1 is the title of the banner. Font is inside _reset.scss
