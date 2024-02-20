@@ -1,11 +1,10 @@
-@import '_mixins';
-
 .banner-background { // Background
   position : relative;
   width: 1240px;
   height: 223px;
   flex-shrink: 0;
   border-radius: 25px;
+  margin : 0 auto;
   &::before { // Overlay
     content: "";
     position: absolute;
@@ -23,7 +22,10 @@
     border-radius: 25px;
   }
   h1 { // Title
-    @include center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     white-space: nowrap;
     color: #FFF;
     text-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
@@ -32,6 +34,7 @@
     font-style: normal;
     font-weight: 700;
     line-height: 142.6%; /* 68.448px */
+
   }
 }
 
@@ -39,3 +42,24 @@
 // background is the background of the banner image. &:: before pseudo-element helps to create the darken effect.
 // .banner is the image itself.
 // h1 is the title of the banner. Font is inside _reset.scss
+
+// RESPONSIVE DESIGN
+
+// 375px
+
+@media (max-width: 375px) {
+  .banner-background {
+    width: 335px;
+    height: 111px;
+    .banner {
+      width: 335px;
+      height: 111px;
+    }
+    h1 {
+      width: 70%;
+      white-space: normal;
+left: 40%;
+      font-size: 24px;
+      line-height: 100%;    }
+  }
+}

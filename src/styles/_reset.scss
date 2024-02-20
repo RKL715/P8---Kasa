@@ -1,9 +1,10 @@
 // Default styles are annoying
 
 body, h1, h2, h3, h4, h5, h6, p, ol, ul, li, figure, figcaption, blockquote, dl, dd, form, fieldset, legend, button, input, textarea, select {
-  margin: 0;
+  margin: 0 auto;
   padding: 0;
   font-family: "montserrat", sans-serif;
+
 }
 
 ol, ul {
@@ -15,3 +16,10 @@ a {
   color: inherit;
 }
 
+* {
+  box-sizing: border-box;
+}
+
+body {
+  width: 1240px;
+}
