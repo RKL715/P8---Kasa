@@ -1,3 +1,5 @@
+@import "_mixins";
+
 header {
   margin : 45px auto 50px;
   display: flex;
@@ -8,13 +10,15 @@ header {
     height: 68px;
   }
   nav {
-    //height: 68px;
+    height: 68px;
+    gap: 57px;
     display: flex;
     justify-content: center;
     align-items: center;
-    ul {
-      display: flex;
-      gap: 57px;
+
+
+    a {
+      @include text-24 (#000);
     }
   }
 }
