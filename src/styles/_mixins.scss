@@ -1,0 +1,18 @@
+@mixin text-24 ($color){
+color: $color;
+  font-size: 24px;
+  font-weight: 500;
+  white-space: nowrap;
+}
+
+@mixin text-18 ($color){
+  color: $color;
+  font-size: 18px;
+  font-weight: 700;
+}
+
+@mixin text-14 ($color){
+  color: $color;
+  font-size: 14px;
+  font-weight: 400;
+}

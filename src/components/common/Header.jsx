@@ -1,13 +1,11 @@
-import header from '/public/header.svg';
-import React, {useState} from "react";
-import { createBrowserRouter, RouterProvider, NavLink,} from "react-router-dom";
+import {NavLink, useLocation} from "react-router-dom";
 
 function Header() {
     return (
         <header>
             <div>
-                <a href="../home/Home.jsx">
-                <img src={header} alt="Logo Kasa" width="100" height="100"/>
+                <a href="/">
+                <img src="/header.svg" alt="Logo Kasa" width="100" height="100"/>
                 </a>
             </div>
             <Navbar />
@@ -17,11 +15,21 @@ function Header() {
 }
 
 const Navbar = () => {
-    const {isOpen, setIsOpen} = useState(false);
+    const location = useLocation();
     return (
         <nav>
-            <NavLink to="/">Home</NavLink>
-            <NavLink to="/about">About</NavLink>
+            <NavLink
+                to="/"
+            style={{ textDecoration: location.pathname === "/" ? "underline" : "none" }}
+            >
+                Home
+            </NavLink>
+            <NavLink
+                to="/about"
+            style={{ textDecoration: location.pathname === "/about" ? "underline" : "none" }}
+            >
+                About
+            </NavLink>
         </nav>
     )
 }

@@ -1,9 +1,15 @@
-import banner from '/public/banner.png';
-function Banner  () {
+import PropTypes from "prop-types";
+
+function Banner ({imgSrc, text}) {
   return <div className='banner-background'>
-    <img className='banner' src={banner} alt="Bannière : Chez vous, partout et ailleurs"/>
-    <h1>Chez vous, partout et ailleurs</h1>
+    <img className='banner' src={imgSrc} alt="Image Paysage"/>
+    <h1>{text}</h1>
   </div>
+}
+
+Banner.propTypes = {
+    imgSrc: PropTypes.string.isRequired,
+    text: PropTypes.string.isRequired
 }
 
 export default Banner;

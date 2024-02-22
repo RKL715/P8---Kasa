@@ -1,14 +1,16 @@
 import Header from "../common/Header.jsx";
 import Footer from "../common/Footer.jsx";
-
+import Banner from "../common/Banner.jsx";
 function About() {
     return (
         <div>
             <Header />
-            <h1>About</h1>
+            <Banner imgSrc='../public/bannerabout.png' text=' '/>
+            <div className={'about'}>
             <p>
-                Kasa is a company that offers a wide range of properties for rent.
+                Placeholder for about page
             </p>
+            </div>
             <Footer />
         </div>
     )
