@@ -148,14 +148,15 @@ footer .footerContent img {
   padding: 56px 50px 43px 50px;
 }
 .gallery-background .gallery figure {
+  cursor: pointer;
   display: flex;
   flex-direction: column-reverse;
-  text-align: center;
+  text-align: left;
   width: 340px;
   height: 340px;
   border-radius: 10px;
   background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, rgba(10, 10, 10, 0) 42%, rgba(4, 4, 4, 0.2) 99.99%, rgba(0, 0, 0, 0.5) 100%);
-  overflow: hidden;
+  contain: content;
 }
 .gallery-background .gallery figure img {
   position: relative;
@@ -165,9 +166,9 @@ footer .footerContent img {
   border-radius: 10px;
 }
 .gallery-background .gallery figure figcaption {
+  padding-left: 5%;
   display: flex;
   position: absolute;
-  z-index: 1;
   color: #FFF;
   font-size: 18px;
   font-weight: 700;
