@@ -1,17 +1,17 @@
-import { useState } from 'react';
+import { useState , useRef} from 'react';
 import PropTypes from "prop-types";
 const Dropdown = ({name, text}) => {
+    const dropdownRef = useRef(null);
     const [isActive, setIsActive] = useState(false);
     const onClick = () => { setIsActive(!isActive); } // 'setIsActive' if not open.
 
     return (
-    <div className={"menu_container"}>
-        <button onClick={onClick} className={`menu_button ${isActive ? 'active' : 'inactive'}`}>{name} <p><img
-            src="public/arrow_back_ios-24px%202.png" alt="arrow dropdown"/></p>
-            <div className={"menu_content_container"}>{text}</div>
-        </button>
-
-    </div>
+        <div className={"menu_container"}>
+            <button onClick={onClick} className={`menu_button`}>{name}
+                <p className={`arrow ${isActive ? 'active' : 'inactive'}`}><img src="public/arrow_back_ios-24px%202.png" alt="arrow dropdown"/></p>
+            </button>
+            <div ref={dropdownRef} className={`menu_content_container ${isActive ? 'active' : 'inactive'}`}>{text}</div>
+        </div>
     )
 }
 

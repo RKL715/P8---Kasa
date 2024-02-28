@@ -261,11 +261,11 @@ footer .footerContent img {
   white-space: nowrap;
   font-weight: 700;
 }
-.menu_container .menu_button p {
+.menu_container .menu_button .arrow {
   position: absolute;
   right: 60px;
 }
-.menu_container .menu_button p.active {
+.menu_container .menu_button .arrow.active {
   transform: rotate(180deg);
 }
 .menu_container .menu_content_container {
