@@ -1,0 +1,37 @@
+@import "_mixins";
+@import "_variables";
+
+.logement {
+  display: flex;
+  flex-direction: column;
+
+  img {
+    width: 50%;
+    height: 50%;
+    border-radius: 10px;
+  }
+
+  .logement_title {
+    @include text-36($color: $main-color);
+  }
+
+  .logement_location {
+    @include text-18($color: black);
+    font-weight: 500 ;
+  }
+.logement_host_name {
+    @include text-14($color: $main-color);
+  }
+.logement_host_pic {
+    width: 64px;
+    height: 64px;
+    border-radius: 50%;
+  }
+
+
+  .logement_rating:before {
+    content : '\2606';
+    color: $main-color;
+  }
+}
+

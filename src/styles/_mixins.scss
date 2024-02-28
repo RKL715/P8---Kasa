@@ -16,3 +16,9 @@ color: $color;
   font-size: 14px;
   font-weight: 400;
 }
+
+@mixin text-36 ($color){
+  color: $color;
+  font-size: 36px;
+  font-weight: 400;
+}

@@ -7,7 +7,7 @@ const Gallery = () => {
             <div className={"gallery"}>
             {logementData.map((logement) => (  // map through the logementData array and render a Card component for each logement
                 <Card
-                    key={logement.id}  // pass the id, figcaption, alt, and image props to the Card component
+                    key={logement.id}  // Key : To identify which items have changed, are added, or are removed.
                     id={logement.id}
                     figcaption={logement.title}
                     alt={logement.title}

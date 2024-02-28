@@ -1,3 +1,4 @@
+@charset "UTF-8";
 body, h1, h2, h3, h4, h5, h6, p, ol, ul, li, figure, figcaption, blockquote, dl, dd, form, fieldset, legend, button, input, textarea, select {
   margin: 0 auto;
   padding: 0;
@@ -20,7 +21,7 @@ a {
 }
 
 body {
-  width: 1240px;
+  width: 1440px;
 }
 
 header {
@@ -137,8 +138,8 @@ footer .footerContent img {
   border-radius: 25px;
   background: #F6F6F6;
   width: 1240px;
-  height: 829px;
-  flex-shrink: 0;
+  height: auto;
+  margin: 0 auto;
 }
 .gallery-background .gallery {
   display: grid;
@@ -166,7 +167,7 @@ footer .footerContent img {
   border-radius: 10px;
 }
 .gallery-background .gallery figure figcaption {
-  padding-left: 5%;
+  padding: 20px;
   display: flex;
   position: absolute;
   color: #FFF;
@@ -175,7 +176,9 @@ footer .footerContent img {
 }
 
 .about {
-  background: black;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .error h1 {
@@ -200,6 +203,86 @@ footer .footerContent img {
   font-weight: 500;
   text-decoration-line: underline;
   text-align: center;
+}
+
+.logement {
+  display: flex;
+  flex-direction: column;
+}
+.logement img {
+  width: 50%;
+  height: 50%;
+  border-radius: 10px;
+}
+.logement .logement_title {
+  color: #FF6060;
+  font-size: 36px;
+  font-weight: 400;
+}
+.logement .logement_location {
+  color: black;
+  font-size: 18px;
+  font-weight: 700;
+  font-weight: 500;
+}
+.logement .logement_host_name {
+  color: #FF6060;
+  font-size: 14px;
+  font-weight: 400;
+}
+.logement .logement_host_pic {
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+}
+.logement .logement_rating:before {
+  content: "☆";
+  color: #FF6060;
+}
+
+.menu_container {
+  position: relative;
+  display: inline-block;
+}
+.menu_container .menu_button {
+  background-color: #FF6060;
+  width: 1023px;
+  color: white;
+  display: flex;
+  padding: 10px;
+  border-radius: 5px;
+  margin: 30px 30px 0;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+  color: white;
+  font-size: 24px;
+  font-weight: 500;
+  white-space: nowrap;
+  font-weight: 700;
+}
+.menu_container .menu_button p {
+  position: absolute;
+  right: 60px;
+}
+.menu_container .menu_button p.active {
+  transform: rotate(180deg);
+}
+.menu_container .menu_content_container {
+  width: 1023px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 20px;
+  background: rgba(246, 246, 246, 0.4509803922) 45%;
+  white-space: normal;
+  color: black;
+  font-size: 18px;
+  font-weight: 700;
+  font-weight: 400;
+  display: none;
+}
+.menu_container .menu_content_container.active {
+  display: block;
 }
 
 /*# sourceMappingURL=styles.css.map */
