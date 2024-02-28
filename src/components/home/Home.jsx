@@ -7,7 +7,7 @@ function Home() {
     return (
         <div>
             <Header />
-            <Banner imgSrc='../public/banner.png' text='Chez vous, partout et ailleurs'/>
+            <Banner imgSrc='/banner.png' text='Chez vous, partout et ailleurs'/>
             <Gallery />
             <Footer />
         </div>
