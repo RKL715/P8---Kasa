@@ -264,9 +264,10 @@ footer .footerContent img {
 .menu_container .menu_button .arrow {
   position: absolute;
   right: 60px;
+  transition: transform 0.5s ease;
 }
 .menu_container .menu_button .arrow.active {
-  transform: rotate(180deg);
+  transform: rotate(-180deg);
 }
 .menu_container .menu_content_container {
   width: 1023px;
@@ -280,9 +281,13 @@ footer .footerContent img {
   font-weight: 700;
   font-weight: 400;
   display: none;
+  transition: transform 0.5s ease;
+  transform: translateY(-20px);
 }
 .menu_container .menu_content_container.active {
+  transform: translateY(0);
   display: block;
+  height: auto;
 }
 
 /*# sourceMappingURL=styles.css.map */

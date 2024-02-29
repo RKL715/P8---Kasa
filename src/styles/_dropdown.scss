@@ -22,9 +22,9 @@
     .arrow {
         position: absolute;
         right: 60px;
-
+      transition : transform 0.5s ease;
       &.active {
-        transform: rotate(180deg);
+        transform: rotate(-180deg);
       }
     }
   }
@@ -37,13 +37,20 @@
     white-space: normal;
     @include text-18(black);
     font-weight: 400;
-    display: none;
+display: none;
+    transition: transform 0.5s ease;
+    transform : translateY(-20px);
 
     &.active {
-      display: block;
+        transform: translateY(0);
+        display: block;
+        height: auto;
     }
   }
 }
+
+
+
 
 //control the button style with text, arrow background and color.
 // used in about page and logement page
