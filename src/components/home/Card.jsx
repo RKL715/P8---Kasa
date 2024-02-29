@@ -21,7 +21,7 @@ Card.propTypes = {
     alt: PropTypes.string.isRequired,
     image: PropTypes.string.isRequired,
     figcaption: PropTypes.string.isRequired,
-    id: PropTypes.number.isRequired,
+    id: PropTypes.string.isRequired,
 }
 
 export default Card;
