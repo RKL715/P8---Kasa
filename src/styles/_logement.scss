@@ -6,9 +6,10 @@
   flex-direction: column;
 
   img {
-    width: 50%;
-    height: 50%;
     border-radius: 10px;
+    width: 1240px;
+    height: 415px;
+    flex-shrink: 0;
   }
 
   .logement_title {

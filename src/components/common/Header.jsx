@@ -22,13 +22,13 @@ const Navbar = () => {
                 to="/"
             style={{ textDecoration: location.pathname === "/" ? "underline" : "none" }}
             >
-                Home
+                Accueil
             </NavLink>
             <NavLink
                 to="/about"
             style={{ textDecoration: location.pathname === "/about" ? "underline" : "none" }}
             >
-                About
+                A Propos
             </NavLink>
         </nav>
     )

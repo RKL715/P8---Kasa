@@ -12,7 +12,9 @@
     right: 0;
     bottom: 0;
     left: 0;
-    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6));
+    opacity: 0.6;
+    background: #000;
+    mix-blend-mode: darken;
     border-radius: 25px;
   }
   .banner { // Image
@@ -20,6 +22,7 @@
     height: 223px;
     flex-shrink: 0;
     border-radius: 25px;
+    object-fit: cover;
   }
   h1 { // Title
     position: absolute;
