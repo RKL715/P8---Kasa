@@ -10,6 +10,7 @@ function Card({alt, image, figcaption, id}) {
       <div className={'card-handle'} onClick={handleClick}> {/* add an onClick event to the card that calls the handleClick function */}
     <figure className='card'> {/* create a figure element with a class of card */}
         <img src={image} alt={alt} /> {/* add an img element with the src and alt attributes */}
+        <div className={"overlay"}> {/* add a div element with a class of overlay */} </div>
         <figcaption>{figcaption}</figcaption> {/* add a figcaption element with the figcaption as the text */}
     </figure>
 

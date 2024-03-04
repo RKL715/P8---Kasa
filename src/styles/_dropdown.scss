@@ -18,7 +18,7 @@
     cursor: pointer;
     @include text-24(white);
     font-weight: 700;
-
+z-index: 1;
     .arrow {
         position: absolute;
         right: 60px;
@@ -37,20 +37,30 @@
     white-space: normal;
     @include text-18(black);
     font-weight: 400;
-display: none;
-    transition: transform 0.5s ease;
-    transform : translateY(-20px);
-
+    display: none;
     &.active {
-        transform: translateY(0);
+        animation: scaledown 0.5s ease;
         display: block;
-        height: auto;
     }
   }
 }
 
 
-
+// KEYFRAMES
+@keyframes scaledown    {
+    0% {
+        transform: translateY(-20px);
+      opacity: 0;
+    }
+  50% {
+        transform: translateY(-10px);
+    opacity: 0.3%;
+    }
+    100% {
+        transform: translateY(0px);
+        opacity: 1;
+    }
+}
 
 //control the button style with text, arrow background and color.
 // used in about page and logement page

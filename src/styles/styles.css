@@ -32,7 +32,9 @@ header {
   height: 68px;
 }
 header img {
+  width: 210.322px;
   height: 68px;
+  flex-shrink: 0;
 }
 header nav {
   height: 68px;
@@ -93,7 +95,9 @@ footer .footerContent img {
   right: 0;
   bottom: 0;
   left: 0;
-  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6));
+  opacity: 0.6;
+  background: #000;
+  mix-blend-mode: darken;
   border-radius: 25px;
 }
 .banner-background .banner {
@@ -101,6 +105,7 @@ footer .footerContent img {
   height: 223px;
   flex-shrink: 0;
   border-radius: 25px;
+  object-fit: cover;
 }
 .banner-background h1 {
   position: absolute;
@@ -156,7 +161,6 @@ footer .footerContent img {
   width: 340px;
   height: 340px;
   border-radius: 10px;
-  background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, rgba(10, 10, 10, 0) 42%, rgba(4, 4, 4, 0.2) 99.99%, rgba(0, 0, 0, 0.5) 100%);
   contain: content;
 }
 .gallery-background .gallery figure img {
@@ -165,6 +169,7 @@ footer .footerContent img {
   width: 340px;
   height: 340px;
   border-radius: 10px;
+  object-fit: cover;
 }
 .gallery-background .gallery figure figcaption {
   padding: 20px;
@@ -173,6 +178,14 @@ footer .footerContent img {
   color: #FFF;
   font-size: 18px;
   font-weight: 700;
+}
+.gallery-background .gallery figure .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, rgba(10, 10, 10, 0) 42%, rgba(4, 4, 4, 0.2) 99.99%, rgba(0, 0, 0, 0.5) 100%);
 }
 
 .about {
@@ -210,9 +223,10 @@ footer .footerContent img {
   flex-direction: column;
 }
 .logement img {
-  width: 50%;
-  height: 50%;
   border-radius: 10px;
+  width: 1240px;
+  height: 415px;
+  flex-shrink: 0;
 }
 .logement .logement_title {
   color: #FF6060;
@@ -260,6 +274,7 @@ footer .footerContent img {
   font-weight: 500;
   white-space: nowrap;
   font-weight: 700;
+  z-index: 1;
 }
 .menu_container .menu_button .arrow {
   position: absolute;
@@ -281,13 +296,25 @@ footer .footerContent img {
   font-weight: 700;
   font-weight: 400;
   display: none;
-  transition: transform 0.5s ease;
-  transform: translateY(-20px);
 }
 .menu_container .menu_content_container.active {
-  transform: translateY(0);
+  animation: scaledown 0.5s ease;
   display: block;
-  height: auto;
+}
+
+@keyframes scaledown {
+  0% {
+    transform: translateY(-20px);
+    opacity: 0;
+  }
+  50% {
+    transform: translateY(-10px);
+    opacity: 0.3%;
+  }
+  100% {
+    transform: translateY(0px);
+    opacity: 1;
+  }
 }
 
 /*# sourceMappingURL=styles.css.map */
