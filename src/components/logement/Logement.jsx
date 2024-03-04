@@ -20,6 +20,9 @@ const Logement = () => {
                     location={logement.location}
                 host={logement.host}
                 rating={logement.rating}
+                tags={logement.tags}
+                description={logement.description}
+                equipments={logement.equipments}
                 />
         </div>
         <Footer />
