@@ -26,7 +26,7 @@ const {name, picture} = host;
 
             <div className={'logement_third_row'}>
                 <div> <Dropdown name={'Description'} text={description} className={'logement_description'}  />  </div>
-                <div> <Dropdown name={'Équipements'} text={equipments} className={'logement_equipments'} /> </div>
+               <div><Dropdown name={'Équipements'} text={equipments}> <ul> {equipments.map((equipment, index) => (<li key={index} className={'logement_equipments'}>{equipment}</li>  ))} </ul> </Dropdown> </div>
             </div>
 
         </div>
@@ -43,7 +43,8 @@ Layout.propTypes = {
         picture: PropTypes.string.isRequired,
     }),
     description: PropTypes.string.isRequired,
-    equipments: PropTypes.array.isRequired,
+    equipments: PropTypes.arrayOf(PropTypes.string).isRequired,
+    // equipments: PropTypes.array.isRequired,
     tags: PropTypes.array.isRequired,
 
 

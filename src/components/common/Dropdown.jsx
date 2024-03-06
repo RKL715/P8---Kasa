@@ -11,10 +11,21 @@ const Dropdown = ({name, text}) => {
             <button onClick={onClick} className={`menu_button`}>{name}
                 <p className={`arrow ${isActive ? 'active' : 'inactive'}`}><img src={"arrow.png"} alt="arrow dropdown"/></p>
             </button>
-            <div ref={dropdownRef} className={`menu_content_container ${isActive ? 'active' : 'inactive'}`}>{text}</div>
+            <div ref={dropdownRef} className={`menu_content_container ${isActive ? 'active' : 'inactive'}`}>
+                {/* Check if text is an array and render accordingly */}
+                {Array.isArray(text) ? (
+                    <ul>
+                        {text.map((item, index) => (
+                            <li key={index}>{item}</li>
+                        ))}
+                    </ul>
+                ) : (
+                    text
+                )}
+            </div>
         </div>
-    )
-}
+    );
+};
 
 Dropdown.propTypes = {
     name: PropTypes.string.isRequired,

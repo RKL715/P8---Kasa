@@ -221,6 +221,7 @@ footer .footerContent img {
 .logement {
   display: flex;
   flex-direction: column;
+  margin: 0 100px;
 }
 .logement img {
   border-radius: 10px;
@@ -278,14 +279,13 @@ footer .footerContent img {
   font-weight: 400;
   border-radius: 10px;
   background: #FF6060;
-  width: 115px;
+  min-width: fit-content;
+  padding: 15px 25px;
   height: 25px;
   margin-top: 10px;
   display: flex;
   justify-content: center;
   align-items: center;
-  overflow: hidden;
-  white-space: nowrap;
 }
 .logement .logement_third_row {
   margin-top: 25px;
@@ -300,8 +300,17 @@ footer .footerContent img {
 }
 .logement .logement_third_row .logement_equipments {
   display: flex;
+  flex-direction: column;
   gap: 10px;
   margin-top: 20px;
+}
+.logement .logement_third_row .menu_button {
+  width: 582px;
+  margin: auto 0;
+}
+.logement .logement_third_row .menu_content_container {
+  width: 582px;
+  margin: auto 0;
 }
 
 .menu_container {

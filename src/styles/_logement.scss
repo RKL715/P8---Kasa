@@ -4,6 +4,7 @@
 .logement {
   display: flex;
   flex-direction: column;
+  margin: 0 100px;
 
   img {
     border-radius: 10px;
@@ -16,8 +17,8 @@
 
   .logement_first_row {
     margin-top: 30px;
-display: flex;
-justify-content: space-between;
+    display: flex;
+    justify-content: space-between;
 
     .logement_infos {
 
@@ -62,14 +63,13 @@ justify-content: space-between;
         @include text-14($color: white);
         border-radius: 10px;
         background: $main-color;
-        width: 115px;
+        min-width: fit-content;
+        padding: 15px 25px;
         height: 25px;
         margin-top: 10px;
         display: flex;
         justify-content: center;
         align-items: center;
-        overflow: hidden;
-        white-space: nowrap;
       }
     }
   }
@@ -86,8 +86,20 @@ justify-content: space-between;
 
   .logement_equipments {
     display: flex;
+    flex-direction: column;
     gap: 10px;
     margin-top: 20px;
+
+  }
+
+  .menu_button {
+    width: 582px;
+    margin : auto 0;
+  }
+
+  .menu_content_container {
+    width: 582px;
+    margin : auto 0;
   }
 }
 }
