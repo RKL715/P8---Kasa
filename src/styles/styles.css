@@ -223,7 +223,7 @@ footer .footerContent img {
   flex-direction: column;
   margin: 0 100px;
 }
-.logement img {
+.logement .logement_pictures {
   border-radius: 10px;
   width: 1240px;
   height: 415px;
@@ -307,6 +307,9 @@ footer .footerContent img {
 .logement .logement_third_row .menu_button {
   width: 582px;
   margin: auto 0;
+}
+.logement .logement_third_row .menu_button .arrow {
+  right: 20px;
 }
 .logement .logement_third_row .menu_content_container {
   width: 582px;

@@ -1,6 +1,6 @@
 import { useState , useRef} from 'react';
 import PropTypes from "prop-types";
-import "/public/arrow.png";
+// import "/arrow.png";
 const Dropdown = ({name, text}) => {
     const dropdownRef = useRef(null);
     const [isActive, setIsActive] = useState(false);
@@ -9,7 +9,7 @@ const Dropdown = ({name, text}) => {
     return (
         <div className={"menu_container"}>
             <button onClick={onClick} className={`menu_button`}>{name}
-                <p className={`arrow ${isActive ? 'active' : 'inactive'}`}><img src={"arrow.png"} alt="arrow dropdown"/></p>
+                <p className={`arrow ${isActive ? 'active' : 'inactive'}`}><img src={"../public/arrow.png"} alt="arrow dropdown"/></p>
             </button>
             <div ref={dropdownRef} className={`menu_content_container ${isActive ? 'active' : 'inactive'}`}>
                 {/* Check if text is an array and render accordingly */}

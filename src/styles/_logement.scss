@@ -6,7 +6,7 @@
   flex-direction: column;
   margin: 0 100px;
 
-  img {
+  .logement_pictures {
     border-radius: 10px;
     width: 1240px;
     height: 415px;
@@ -95,6 +95,10 @@
   .menu_button {
     width: 582px;
     margin : auto 0;
+
+    .arrow {
+      right: 20px;
+    }
   }
 
   .menu_content_container {

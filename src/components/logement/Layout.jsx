@@ -6,7 +6,7 @@ const {name, picture} = host;
     return (
         <div className={'logement'}>
 
-            <img src={pictures} alt={title}/>
+            <img src={pictures} alt={title} className={'logement_pictures'}/>
 
             <div className={'logement_first_row'}>
                 <div className={'logement_infos'}>
