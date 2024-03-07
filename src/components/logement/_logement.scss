@@ -1,5 +1,5 @@
-@import "_mixins";
-@import "_variables";
+@import "../../styles/mixins";
+@import "../../styles/variables";
 
 .logement {
   display: flex;
@@ -50,9 +50,13 @@
     margin-top: 20px;
     display: flex;
     justify-content: space-between;
-    .logement_rating:before {
-      content : '\2606';
-      color: $main-color;
+    .logement_rating {
+      display : flex;
+      flex-direction: row;
+.star {
+  height: auto;
+    width: auto;
+}
     }
 
     .logement_tags {

@@ -1,4 +1,3 @@
-@charset "UTF-8";
 body, h1, h2, h3, h4, h5, h6, p, ol, ul, li, figure, figcaption, blockquote, dl, dd, form, fieldset, legend, button, input, textarea, select {
   margin: 0 auto;
   padding: 0;
@@ -185,7 +184,7 @@ footer .footerContent img {
   left: 0;
   width: 100%;
   height: 100%;
-  background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, rgba(10, 10, 10, 0) 42%, rgba(4, 4, 4, 0.2) 99.99%, rgba(0, 0, 0, 0.5) 100%);
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, rgba(10, 10, 10, 0) 42%, rgba(4, 4, 4, 0.2) 99.99%, rgb(0, 0, 0) 100%);
 }
 
 .about {
@@ -265,9 +264,13 @@ footer .footerContent img {
   display: flex;
   justify-content: space-between;
 }
-.logement .logement_second_row .logement_rating:before {
-  content: "☆";
-  color: #FF6060;
+.logement .logement_second_row .logement_rating {
+  display: flex;
+  flex-direction: row;
+}
+.logement .logement_second_row .logement_rating .star {
+  height: auto;
+  width: auto;
 }
 .logement .logement_second_row .logement_tags {
   display: flex;

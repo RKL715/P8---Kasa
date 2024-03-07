@@ -1,5 +1,6 @@
 import PropTypes from "prop-types";
 import Dropdown from "../common/Dropdown.jsx";
+import Stars from "./stars.jsx";
 function Layout ({pictures, title, location, host, rating, tags, description,equipments})  {
 const {name, picture} = host;
 
@@ -21,12 +22,16 @@ const {name, picture} = host;
 
             <div className={'logement_second_row'}>
                 <div className={'logement_tags'}>{tags.map((tag, index) => (<div key={index} className={'logement_tags_item'}>{tag}</div>)) }</div>
-                <div className={'logement_rating'}>{rating}</div>
+                <div><Stars rating={rating}/>
+                </div>
             </div>
 
             <div className={'logement_third_row'}>
-                <div> <Dropdown name={'Description'} text={description} className={'logement_description'}  />  </div>
-               <div><Dropdown name={'Équipements'} text={equipments}> <ul> {equipments.map((equipment, index) => (<li key={index} className={'logement_equipments'}>{equipment}</li>  ))} </ul> </Dropdown> </div>
+                <div><Dropdown name={'Description'} text={description} className={'logement_description'}/></div>
+                <div><Dropdown name={'Équipements'} text={equipments}>
+                    <ul> {equipments.map((equipment, index) => (
+                        <li key={index} className={'logement_equipments'}>{equipment}</li>))} </ul>
+                </Dropdown></div>
             </div>
 
         </div>
@@ -37,7 +42,7 @@ Layout.propTypes = {
     pictures: PropTypes.string.isRequired,
     title: PropTypes.string.isRequired,
     location: PropTypes.string.isRequired,
-    rating : PropTypes.string.isRequired,
+    rating: PropTypes.string.isRequired,
     host: PropTypes.shape({
         name: PropTypes.string.isRequired,
         picture: PropTypes.string.isRequired,
