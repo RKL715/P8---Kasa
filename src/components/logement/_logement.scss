@@ -34,9 +34,13 @@
 
     .logement_host {
         display: flex;
+      position: relative;
 
       .logement_host_name {
         @include text-14($color: $main-color);
+        position: absolute;
+        right : 5em;
+        top: 1em;
       }
       .logement_host_pic {
         width: 64px;
@@ -53,6 +57,7 @@
     .logement_rating {
       display : flex;
       flex-direction: row;
+      gap : 15px;
 .star {
   height: auto;
     width: auto;
