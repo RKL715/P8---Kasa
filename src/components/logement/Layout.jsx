@@ -1,13 +1,15 @@
 import PropTypes from "prop-types";
 import Dropdown from "../common/Dropdown.jsx";
 import Stars from "./stars.jsx";
+import ImageSlider from "./Carousel.jsx";
 function Layout ({pictures, title, location, host, rating, tags, description,equipments})  {
 const {name, picture} = host;
 
     return (
         <div className={'logement'}>
 
-            <img src={pictures} alt={title} className={'logement_pictures'}/>
+            <ImageSlider pictures={pictures} title={title} />
+            {/*<img src={pictures} alt={title} className={'logement_pictures'}/>*/}
 
             <div className={'logement_first_row'}>
                 <div className={'logement_infos'}>
@@ -39,7 +41,7 @@ const {name, picture} = host;
 }
 
 Layout.propTypes = {
-    pictures: PropTypes.string.isRequired,
+    pictures: PropTypes.array.isRequired,
     title: PropTypes.string.isRequired,
     location: PropTypes.string.isRequired,
     rating: PropTypes.string.isRequired,

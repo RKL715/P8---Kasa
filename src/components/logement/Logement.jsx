@@ -19,7 +19,7 @@ const Logement = () => {
                     <div>
                         <Layout
                             key={logement.id}  // Key : To identify which items have changed, are added, or are removed.
-                            pictures={logement.pictures[0]}
+                            pictures={logement.pictures}
                             title={logement.title}
                             location={logement.location}
                             host={logement.host}

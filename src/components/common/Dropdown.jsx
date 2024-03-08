@@ -1,6 +1,6 @@
 import { useState , useRef} from 'react';
 import PropTypes from "prop-types";
-// import "/arrow.png";
+
 const Dropdown = ({name, text}) => {
     const dropdownRef = useRef(null);
     const [isActive, setIsActive] = useState(false);

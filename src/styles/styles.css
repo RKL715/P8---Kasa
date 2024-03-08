@@ -226,12 +226,38 @@ footer .footerContent img {
   flex-direction: column;
   margin: 0 100px;
 }
-.logement .logement_pictures {
+.logement .logement_carousel {
+  position: relative;
+  z-index: 0;
+}
+.logement .logement_carousel button {
+  position: absolute;
+  z-index: 1;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+.logement .logement_carousel #prev {
+  left: 2%;
+  top: 45%;
+}
+.logement .logement_carousel #next {
+  right: 2%;
+  top: 45%;
+  transform: rotate(180deg);
+}
+.logement .logement_carousel_slide {
+  position: relative;
   border-radius: 10px;
   width: 1240px;
   height: 415px;
   flex-shrink: 0;
   margin: 0 auto;
+}
+.logement .logement_carousel_slide img {
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
   object-fit: cover;
 }
 .logement .logement_first_row {
