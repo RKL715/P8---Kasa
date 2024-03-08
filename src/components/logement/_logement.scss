@@ -87,6 +87,7 @@
     margin-top: 25px;
     display: flex;
     justify-content: space-between;
+  margin-bottom: 50px;
 
   .logement_description {
     @include text-18($color: black);

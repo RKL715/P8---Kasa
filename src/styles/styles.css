@@ -303,6 +303,7 @@ footer .footerContent img {
   margin-top: 25px;
   display: flex;
   justify-content: space-between;
+  margin-bottom: 50px;
 }
 .logement .logement_third_row .logement_description {
   color: black;
