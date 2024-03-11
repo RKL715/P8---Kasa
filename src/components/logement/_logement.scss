@@ -1,0 +1,158 @@
+@import "../../styles/mixins";
+@import "../../styles/variables";
+
+.logement {
+  display: flex;
+  flex-direction: column;
+  margin: 0 100px;
+
+  .logement_carousel {
+    position: relative;
+    z-index: 0;
+
+    button {
+      position: absolute;
+      z-index: 1;
+      background: none;
+      border: none;
+      cursor: pointer;
+    }
+      #prev {
+        left: 2%;
+        top: 45%;
+      }
+
+      #next {
+        right: 2%;
+        top: 45%;
+        transform: rotate(180deg);
+      }
+      .logement_carousel_number {
+        position : absolute;
+        z-index: 1;
+        bottom : 25px;
+        left : 50%;
+        @include text-18(white);
+        font-weight: 500;
+      }
+  }
+
+  .logement_carousel_slide {
+    position : relative;
+    border-radius: 10px;
+    width: 1240px;
+    height: 415px;
+    flex-shrink: 0;
+    margin : 0 auto;
+
+    img {
+      width: 100%;
+      height: 100%;
+      border-radius: 10px;
+      object-fit: cover;
+    }
+  }
+
+  .logement_first_row {
+    margin-top: 30px;
+    display: flex;
+    justify-content: space-between;
+
+    .logement_infos {
+
+      .logement_title {
+        @include text-36($color: $main-color);
+      }
+
+      .logement_location {
+        @include text-18($color: black);
+        font-weight: 500 ;
+      }
+    }
+
+    .logement_host {
+        display: flex;
+      position: relative;
+
+      .logement_host_name {
+        @include text-14($color: $main-color);
+        position: absolute;
+        right : 5em;
+        top: 1em;
+      }
+      .logement_host_pic {
+        width: 64px;
+        height: 64px;
+        border-radius: 50%;
+      }
+    }
+  }
+
+  .logement_second_row {
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-between;
+    .logement_rating {
+      display : flex;
+      flex-direction: row;
+      gap : 15px;
+.star {
+  height: auto;
+    width: auto;
+}
+    }
+
+    .logement_tags {
+      display: flex;
+      gap: 10px;
+
+      .logement_tags_item {
+        @include text-14($color: white);
+        border-radius: 10px;
+        background: $main-color;
+        min-width: fit-content;
+        padding: 15px 25px;
+        height: 25px;
+        margin-top: 10px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+    }
+  }
+
+.logement_third_row {
+    margin-top: 25px;
+    display: flex;
+    justify-content: space-between;
+  margin-bottom: 50px;
+
+  .logement_description {
+    @include text-18($color: black);
+    margin-top: 20px;
+  }
+
+  .logement_equipments {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 20px;
+
+  }
+
+  .menu_button {
+    width: 582px;
+    margin : auto 0;
+
+    .arrow {
+      right: 20px;
+    }
+  }
+
+  .menu_content_container {
+    width: 582px;
+    margin : auto 0;
+  }
+}
+}
+

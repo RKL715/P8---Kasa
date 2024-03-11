@@ -1,0 +1,34 @@
+@import "../../styles/mixins";
+
+
+  footer { // Black background
+    z-index: 0;
+    display: flex;
+    //margin-top: 50px;
+    margin : 0 auto;
+    max-width: 1240px;
+    height: 209px;
+    padding: 66px 464px 29px 463px;
+    flex-direction: column;
+    align-items: center;
+    background-color: black;
+
+
+    .footerContent { // Logo + Text
+      display: flex;
+      flex-direction: column;
+      gap: 28.556px;
+      align-items: center;
+
+      p {
+        @include text-24(#FFF);
+      }
+
+      img {
+        max-width: 122px;
+        height: 39.444px;
+        flex-shrink: 0;
+        filter: brightness(0) invert(1); // turn the image to white
+      }
+    }
+  }

@@ -1,10 +1,10 @@
-@import "_mixins";
+@import "../../styles/mixins";
 
 header {
   margin : 45px auto 50px;
   display: flex;
   justify-content: space-between;
-  width: 1240px;
+  max-width: 1240px;
   height: 68px;
   img {
     width: 210.322px;

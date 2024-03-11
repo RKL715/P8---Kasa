@@ -1,6 +1,6 @@
 .banner-background { // Background
   position : relative;
-  width: 1240px;
+  max-width: 1240px;
   height: 223px;
   flex-shrink: 0;
   border-radius: 25px;
@@ -18,13 +18,13 @@
     border-radius: 25px;
   }
   .banner { // Image
-    width: 1240px;
+    min-width: fit-content;
     height: 223px;
-    flex-shrink: 0;
     border-radius: 25px;
     object-fit: cover;
   }
   h1 { // Title
+    width: auto;
     position: absolute;
     top: 50%;
     left: 50%;
