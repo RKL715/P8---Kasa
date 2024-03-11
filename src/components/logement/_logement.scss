@@ -27,7 +27,14 @@
         top: 45%;
         transform: rotate(180deg);
       }
-
+      .logement_carousel_number {
+        position : absolute;
+        z-index: 1;
+        bottom : 25px;
+        left : 50%;
+        @include text-18(white);
+        font-weight: 500;
+      }
   }
 
   .logement_carousel_slide {

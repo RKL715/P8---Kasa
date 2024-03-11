@@ -246,6 +246,16 @@ footer .footerContent img {
   top: 45%;
   transform: rotate(180deg);
 }
+.logement .logement_carousel .logement_carousel_number {
+  position: absolute;
+  z-index: 1;
+  bottom: 25px;
+  left: 50%;
+  color: white;
+  font-size: 18px;
+  font-weight: 700;
+  font-weight: 500;
+}
 .logement .logement_carousel_slide {
   position: relative;
   border-radius: 10px;
