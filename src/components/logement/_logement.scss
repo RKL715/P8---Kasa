@@ -12,6 +12,7 @@
 
 //CAROUSEL CONTAINER
   .logement_carousel {
+    position: relative;
     min-width: fit-content;
     max-width: 1240px;
     margin: 0;
@@ -24,6 +25,7 @@
 
 //CAROUSEL BUTTONS
     .carousel_button {
+      position: absolute;
       z-index: 1;
       background: none;
       border: none;
@@ -35,10 +37,12 @@
       }
     }
       #prev {
-        float : left;
+        left : 3%;
+        top: 45%;
       }
       #next {
-        float : right;
+        right : 3%;
+        top: 45%;
         transform: rotate(180deg);
       }
 

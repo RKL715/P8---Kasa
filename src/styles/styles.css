@@ -265,6 +265,7 @@ footer .footerContent img {
   }
 }
 .logement .logement_carousel {
+  position: relative;
   min-width: fit-content;
   max-width: 1240px;
   margin: 0;
@@ -277,6 +278,7 @@ footer .footerContent img {
   }
 }
 .logement .logement_carousel .carousel_button {
+  position: absolute;
   z-index: 1;
   background: none;
   border: none;
@@ -289,10 +291,12 @@ footer .footerContent img {
   }
 }
 .logement .logement_carousel #prev {
-  float: left;
+  left: 3%;
+  top: 45%;
 }
 .logement .logement_carousel #next {
-  float: right;
+  right: 3%;
+  top: 45%;
   transform: rotate(180deg);
 }
 .logement .logement_carousel .logement_carousel_number {
