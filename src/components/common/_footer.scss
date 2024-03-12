@@ -11,17 +11,34 @@
     align-items: center;
     background-color: black;
     flex: 1;
+    // RESPONSIVE
+    @media (max-width : 450px) {
+      padding: 66px 120px 58px 120px;
+      width: 100%;
+    }
 
 
 
     .footerContent { // Logo + Text
       display: flex;
       flex-direction: column;
-      gap: 28.556px;
+      gap: 28px;
       align-items: center;
+
+        // RESPONSIVE
+        @media (max-width : 450px) {
+          gap: 10px;
+          width: 70%;
+        }
 
       p {
         @include text-24(#FFF);
+        text-align: center;
+        white-space: pre-wrap;
+        // RESPONSIVE
+        @media (max-width : 450px) {
+          @include text-12 (#FFF);
+          }
       }
 
       img {

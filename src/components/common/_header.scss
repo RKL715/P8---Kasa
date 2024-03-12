@@ -6,14 +6,16 @@ header {
   justify-content: space-between;
   max-width: 1240px;
   height: 68px;
+    // RESPONSIVE
   @media (max-width : 450px) {
     height: 46px;
-    margin : 20px 3em 27px;
+    margin : 20px 7% 27px;
   }
   img {
     width: 210.322px;
     height: 68px;
     flex-shrink: 0;
+    // RESPONSIVE
     @media (max-width : 450px) {
       width: 145px;
       height: 46px;
@@ -25,9 +27,10 @@ header {
     display: flex;
     justify-content: center;
     align-items: center;
+    // RESPONSIVE
     @media (max-width : 450px) {
       gap: 26px;
-        height: 55px;
+      height: 55px;
     }
 
 

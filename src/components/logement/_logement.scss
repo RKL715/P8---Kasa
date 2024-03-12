@@ -15,12 +15,12 @@
     position: relative;
     min-width: fit-content;
     max-width: 1240px;
-    margin: 0;
+    margin: 0 0 30px 0;
     z-index: 0;
     // RESPONSIVE
     @media (max-width : 450px) {
-    max-width: 335px;
-    margin: 0 auto;
+    width: 335px;
+    margin: 0 auto 15px;
     }
 
 //CAROUSEL BUTTONS
@@ -66,7 +66,6 @@
     margin : 0 auto;
     // RESPONSIVE
     @media (max-width : 450px) {
-    max-width: 335px;
     height: 255px;
     }
 
@@ -80,55 +79,77 @@
 
 
 // LOGEMENT INFOS - TITLE, LOCATION, HOST
-  .logement_first_row {
-    margin-top: 30px;
+ .logement_first_row {
+   display: flex;
+   flex-direction: row;
+    justify-content: space-between;
+ }
+  .logement_first_row_infos {
     display: flex;
     justify-content: space-between;
     // RESPONSIVE
-    @media (max-width : 450px) {
-        flex-direction: column;
+    @media (max-width: 450px) {
+      flex-direction: column;
     }
+
     .logement_infos {
       .logement_title {
         @include text-36($color: $main-color);
         // RESPONSIVE
-        @media (max-width : 450px) {
+        @media (max-width: 450px) {
           @include text-18($color: $main-color);
           font-weight: 500;
         }
       }
+
       .logement_location {
         @include text-18($color: black);
-        font-weight: 500 ;
+        font-weight: 500;
         // RESPONSIVE
-        @media (max-width : 450px) {
+        @media (max-width: 450px) {
           @include text-14($color: black);
           margin-top: 10px;
         }
       }
     }
+  }
 
-    .logement_host {
-        display: flex;
-      position: relative;
-      //RESPONSIVE
-      @media (max-width : 450px) {
-        flex-direction: column;
-      }
+.logement_first_row_host {
+  .logement_host {
+    display: flex;
+    align-items: center;
+    float: right;
+    //RESPONSIVE
+    @media (max-width: 450px) {
+      flex-direction: row;
+      position: absolute;
+      right: 5%;
+      bottom: 46%;
+    }
 
-      .logement_host_name {
-        @include text-14($color: $main-color);
-        position: absolute;
-        right : 5em;
-        top: 1em;
+    .logement_host_name {
+      @include text-14($color: $main-color);
+      // RESPONSIVE
+      @media (max-width: 450px) {
+        @include text-12($color: $main-color);
+        white-space: normal;
+        margin: 0;
       }
-      .logement_host_pic {
-        width: 64px;
-        height: 64px;
-        border-radius: 50%;
+    }
+
+    .logement_host_pic {
+      width: 64px;
+      height: 64px;
+      border-radius: 50%;
+      margin-left: 10px;
+      // RESPONSIVE
+      @media (max-width: 450px) {
+        width: 32px;
+        height: 32px;
       }
     }
   }
+}
 
 
 // LOGEMENT VALUES - RATING, TAGS
@@ -138,6 +159,8 @@
     justify-content: space-between;
     // RESPONSIVE
     @media (max-width : 450px) {
+      flex-direction: column-reverse;
+      margin-top: 0;
     }
     .logement_rating {
       display : flex;
@@ -146,6 +169,11 @@
     .star {
       height: auto;
       width: auto;
+        // RESPONSIVE
+        @media (max-width : 450px) {
+          transform: scale(0.8);
+          width: 10px;
+        }
 }
     }
 
@@ -156,7 +184,7 @@
       // RESPONSIVE
       @media (max-width : 450px) {
         flex-direction: row;
-        order: 2;
+        order:  2;
       }
 
       .logement_tags_item {
@@ -170,10 +198,15 @@
         display: flex;
         justify-content: center;
         align-items: center;
+        // RESPONSIVE
+        @media (max-width : 450px) {
+          padding : 0 25px;
+          height: auto;
+            margin-bottom: 20px;
+        }
       }
     }
   }
-
 
 // LOGEMENT DROPDOWN - Description, Equipements
 .logement_third_row {
@@ -185,7 +218,8 @@
     flex-wrap: wrap;
     // RESPONSIVE
   @media (max-width : 450px) {
-
+    flex-direction: column;
+    margin-bottom: 20px;
   }
 
   .menu_container {
@@ -193,7 +227,7 @@
     flex : 0 1 auto;
     // RESPONSIVE
     @media (max-width : 450px) {
-
+      width: 100%;
     }
   }
 
@@ -202,7 +236,7 @@
     margin : auto 0;
     flex : 0 1 auto;
     @media (max-width : 450px) {
-
+      width: 100%;
     }
 
     .arrow {
@@ -213,6 +247,10 @@
   .menu_content_container {
     width: 582px;
     margin : auto 0;
+    // RESPONSIVE
+    @media (max-width : 450px) {
+      width: 100%;
+    }
   }
 }
 }

@@ -10,18 +10,21 @@ const {name, picture} = host;
 
             <ImageSlider pictures={pictures} title={title} />
             {/*<img src={pictures} alt={title} className={'logement_pictures'}/>*/}
-
-            <div className={'logement_first_row'}>
+<div className={'logement_first_row'}>
+            <div className={'logement_first_row_infos'}>
                 <div className={'logement_infos'}>
                     <h1 className={'logement_title'}>{title}</h1>
                     <p className={'logement_location'}>{location}</p>
                 </div>
+            </div>
+
+            <div className={'logement_first_row_host'}>
                 <div className={'logement_host'}>
                     <p className={'logement_host_name'}>{name}</p>
                     <img className={'logement_host_pic'} src={picture} alt={name}/>
                 </div>
             </div>
-
+</div>
             <div className={'logement_second_row'}>
                 <div className={'logement_tags'}>{tags.map((tag, index) => (<div key={index} className={'logement_tags_item'}>{tag}</div>)) }</div>
                 <div><Stars rating={rating}/>
