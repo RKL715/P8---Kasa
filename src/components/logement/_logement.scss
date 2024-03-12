@@ -5,45 +5,66 @@
   display: flex;
   flex-direction: column;
   margin: 0 100px;
+    // RESPONSIVE
+    @media (max-width : 450px) {
+        margin: 0 20px;
+    }
 
+//CAROUSEL CONTAINER
   .logement_carousel {
-    position: relative;
+    min-width: fit-content;
+    max-width: 1240px;
+    margin: 0;
     z-index: 0;
+    // RESPONSIVE
+    @media (max-width : 450px) {
+    max-width: 335px;
+    margin: 0 auto;
+    }
 
-    button {
-      position: absolute;
+//CAROUSEL BUTTONS
+    .carousel_button {
       z-index: 1;
       background: none;
       border: none;
       cursor: pointer;
+      outline: none;
+      // RESPONSIVE
+      @media (max-width : 450px) {
+      height: 50px;
+      }
     }
       #prev {
-        left: 2%;
-        top: 45%;
+        float : left;
       }
-
       #next {
-        right: 2%;
-        top: 45%;
+        float : right;
         transform: rotate(180deg);
       }
+
+//CAROUSEL COUNTER
       .logement_carousel_number {
         position : absolute;
         z-index: 1;
         bottom : 25px;
-        left : 50%;
+        left : 45%;
         @include text-18(white);
         font-weight: 500;
       }
   }
 
+// CAROUSEL SLIDES
   .logement_carousel_slide {
-    position : relative;
     border-radius: 10px;
-    width: 1240px;
+    max-width: 1240px;
     height: 415px;
-    flex-shrink: 0;
+    flex-shrink: 1;
     margin : 0 auto;
+    // RESPONSIVE
+    @media (max-width : 450px) {
+    max-width: 335px;
+    height: 255px;
+    }
 
     img {
       width: 100%;
@@ -53,26 +74,43 @@
     }
   }
 
+
+// LOGEMENT INFOS - TITLE, LOCATION, HOST
   .logement_first_row {
     margin-top: 30px;
     display: flex;
     justify-content: space-between;
-
+    // RESPONSIVE
+    @media (max-width : 450px) {
+        flex-direction: column;
+    }
     .logement_infos {
-
       .logement_title {
         @include text-36($color: $main-color);
+        // RESPONSIVE
+        @media (max-width : 450px) {
+          @include text-18($color: $main-color);
+          font-weight: 500;
+        }
       }
-
       .logement_location {
         @include text-18($color: black);
         font-weight: 500 ;
+        // RESPONSIVE
+        @media (max-width : 450px) {
+          @include text-14($color: black);
+          margin-top: 10px;
+        }
       }
     }
 
     .logement_host {
         display: flex;
       position: relative;
+      //RESPONSIVE
+      @media (max-width : 450px) {
+        flex-direction: column;
+      }
 
       .logement_host_name {
         @include text-14($color: $main-color);
@@ -88,23 +126,34 @@
     }
   }
 
+
+// LOGEMENT VALUES - RATING, TAGS
   .logement_second_row {
     margin-top: 20px;
     display: flex;
     justify-content: space-between;
+    // RESPONSIVE
+    @media (max-width : 450px) {
+    }
     .logement_rating {
       display : flex;
       flex-direction: row;
       gap : 15px;
-.star {
-  height: auto;
-    width: auto;
+    .star {
+      height: auto;
+      width: auto;
 }
     }
 
     .logement_tags {
       display: flex;
       gap: 10px;
+      flex-wrap: wrap;
+      // RESPONSIVE
+      @media (max-width : 450px) {
+        flex-direction: row;
+        order: 2;
+      }
 
       .logement_tags_item {
         @include text-14($color: white);
@@ -121,28 +170,36 @@
     }
   }
 
+
+// LOGEMENT DROPDOWN - Description, Equipements
 .logement_third_row {
     margin-top: 25px;
     display: flex;
     justify-content: space-between;
-  margin-bottom: 50px;
+    margin-bottom: 50px;
+    max-width: 100%;
+    flex-wrap: wrap;
+    // RESPONSIVE
+  @media (max-width : 450px) {
 
-  .logement_description {
-    @include text-18($color: black);
-    margin-top: 20px;
   }
 
-  .logement_equipments {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
+  .menu_container {
     margin-top: 20px;
+    flex : 0 1 auto;
+    // RESPONSIVE
+    @media (max-width : 450px) {
 
+    }
   }
 
   .menu_button {
     width: 582px;
     margin : auto 0;
+    flex : 0 1 auto;
+    @media (max-width : 450px) {
+
+    }
 
     .arrow {
       right: 20px;

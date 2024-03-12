@@ -19,13 +19,13 @@ const ImageSlider = ({pictures, title}) => {
 
     return (
         <div className={'logement_carousel'}>
-            <button className={'carousel_button'} id={'prev'} onClick={prevSlide}><img src={"../public/slider_arrow.png"}  alt="To previous slide"/>  </button>
+            <button className={'carousel_button'} id={'prev'} onClick={prevSlide}><img src={"../public/slider_arrow.png"}  alt="To previous slide" height={'100%'}/>  </button>
             <div className={'logement_carousel_slide'}>
                 <img src={pictures[currentIndex]} alt={title[currentIndex]}/>
                 <p className={'logement_carousel_number'}> {currentIndex + 1} / {pictures.length} </p> {/* Le counter : currentIndex + 1 / la longueur de pictures */}
             </div>
             <button className={'carousel_button'} id={'next'} onClick={nextSlide}><img src={"../public/slider_arrow.png"}
-                                                                                       alt="To next slide"/> </button>
+                                                                                       alt="To next slide" height={'100%'} /> </button>
         </div>
     )
 

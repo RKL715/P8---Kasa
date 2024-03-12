@@ -20,20 +20,40 @@ a {
 }
 
 body {
+  min-width: 320px;
   max-width: 1440px;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+#root {
+  flex: 1;
 }
 
 header {
-  margin: 45px auto 50px;
+  margin: 45px 6em 50px;
   display: flex;
   justify-content: space-between;
   max-width: 1240px;
   height: 68px;
 }
+@media (max-width: 450px) {
+  header {
+    height: 46px;
+    margin: 20px 3em 27px;
+  }
+}
 header img {
   width: 210.322px;
   height: 68px;
   flex-shrink: 0;
+}
+@media (max-width: 450px) {
+  header img {
+    width: 145px;
+    height: 46px;
+  }
 }
 header nav {
   height: 68px;
@@ -42,23 +62,36 @@ header nav {
   justify-content: center;
   align-items: center;
 }
+@media (max-width: 450px) {
+  header nav {
+    gap: 26px;
+    height: 55px;
+  }
+}
 header nav a {
   color: #000;
   font-size: 24px;
   font-weight: 500;
   white-space: nowrap;
 }
+@media (max-width: 450px) {
+  header nav a {
+    color: #000;
+    font-size: 12px;
+    font-weight: 400;
+  }
+}
 
 footer {
-  z-index: 0;
   display: flex;
-  margin: 0 auto;
+  margin: auto;
   max-width: 1240px;
-  height: 209px;
+  max-height: 100%;
   padding: 66px 464px 29px 463px;
   flex-direction: column;
   align-items: center;
   background-color: black;
+  flex: 1;
 }
 footer .footerContent {
   display: flex;
@@ -226,43 +259,64 @@ footer .footerContent img {
   flex-direction: column;
   margin: 0 100px;
 }
+@media (max-width: 450px) {
+  .logement {
+    margin: 0 20px;
+  }
+}
 .logement .logement_carousel {
-  position: relative;
+  min-width: fit-content;
+  max-width: 1240px;
+  margin: 0;
   z-index: 0;
 }
-.logement .logement_carousel button {
-  position: absolute;
+@media (max-width: 450px) {
+  .logement .logement_carousel {
+    max-width: 335px;
+    margin: 0 auto;
+  }
+}
+.logement .logement_carousel .carousel_button {
   z-index: 1;
   background: none;
   border: none;
   cursor: pointer;
+  outline: none;
+}
+@media (max-width: 450px) {
+  .logement .logement_carousel .carousel_button {
+    height: 50px;
+  }
 }
 .logement .logement_carousel #prev {
-  left: 2%;
-  top: 45%;
+  float: left;
 }
 .logement .logement_carousel #next {
-  right: 2%;
-  top: 45%;
+  float: right;
   transform: rotate(180deg);
 }
 .logement .logement_carousel .logement_carousel_number {
   position: absolute;
   z-index: 1;
   bottom: 25px;
-  left: 50%;
+  left: 45%;
   color: white;
   font-size: 18px;
   font-weight: 700;
   font-weight: 500;
 }
 .logement .logement_carousel_slide {
-  position: relative;
   border-radius: 10px;
-  width: 1240px;
+  max-width: 1240px;
   height: 415px;
-  flex-shrink: 0;
+  flex-shrink: 1;
   margin: 0 auto;
+}
+@media (max-width: 450px) {
+  .logement .logement_carousel_slide {
+    max-width: 335px;
+    height: 255px;
+  }
 }
 .logement .logement_carousel_slide img {
   width: 100%;
@@ -275,10 +329,23 @@ footer .footerContent img {
   display: flex;
   justify-content: space-between;
 }
+@media (max-width: 450px) {
+  .logement .logement_first_row {
+    flex-direction: column;
+  }
+}
 .logement .logement_first_row .logement_infos .logement_title {
   color: #FF6060;
   font-size: 36px;
   font-weight: 400;
+}
+@media (max-width: 450px) {
+  .logement .logement_first_row .logement_infos .logement_title {
+    color: #FF6060;
+    font-size: 18px;
+    font-weight: 700;
+    font-weight: 500;
+  }
 }
 .logement .logement_first_row .logement_infos .logement_location {
   color: black;
@@ -286,9 +353,22 @@ footer .footerContent img {
   font-weight: 700;
   font-weight: 500;
 }
+@media (max-width: 450px) {
+  .logement .logement_first_row .logement_infos .logement_location {
+    color: black;
+    font-size: 14px;
+    font-weight: 400;
+    margin-top: 10px;
+  }
+}
 .logement .logement_first_row .logement_host {
   display: flex;
   position: relative;
+}
+@media (max-width: 450px) {
+  .logement .logement_first_row .logement_host {
+    flex-direction: column;
+  }
 }
 .logement .logement_first_row .logement_host .logement_host_name {
   color: #FF6060;
@@ -320,6 +400,13 @@ footer .footerContent img {
 .logement .logement_second_row .logement_tags {
   display: flex;
   gap: 10px;
+  flex-wrap: wrap;
+}
+@media (max-width: 450px) {
+  .logement .logement_second_row .logement_tags {
+    flex-direction: row;
+    order: 2;
+  }
 }
 .logement .logement_second_row .logement_tags .logement_tags_item {
   color: white;
@@ -340,22 +427,17 @@ footer .footerContent img {
   display: flex;
   justify-content: space-between;
   margin-bottom: 50px;
+  max-width: 100%;
+  flex-wrap: wrap;
 }
-.logement .logement_third_row .logement_description {
-  color: black;
-  font-size: 18px;
-  font-weight: 700;
+.logement .logement_third_row .menu_container {
   margin-top: 20px;
-}
-.logement .logement_third_row .logement_equipments {
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-  margin-top: 20px;
+  flex: 0 1 auto;
 }
 .logement .logement_third_row .menu_button {
   width: 582px;
   margin: auto 0;
+  flex: 0 1 auto;
 }
 .logement .logement_third_row .menu_button .arrow {
   right: 20px;
@@ -367,7 +449,7 @@ footer .footerContent img {
 
 .menu_container {
   position: relative;
-  display: inline-block;
+  flex: 0 1 auto;
 }
 .menu_container .menu_button {
   background-color: #FF6060;
@@ -386,6 +468,7 @@ footer .footerContent img {
   white-space: nowrap;
   font-weight: 700;
   z-index: 1;
+  flex: 0 1 auto;
 }
 .menu_container .menu_button .arrow {
   position: absolute;

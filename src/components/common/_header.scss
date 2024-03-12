@@ -1,15 +1,23 @@
 @import "../../styles/mixins";
 
 header {
-  margin : 45px auto 50px;
+  margin : 45px 6em 50px;
   display: flex;
   justify-content: space-between;
   max-width: 1240px;
   height: 68px;
+  @media (max-width : 450px) {
+    height: 46px;
+    margin : 20px 3em 27px;
+  }
   img {
     width: 210.322px;
     height: 68px;
     flex-shrink: 0;
+    @media (max-width : 450px) {
+      width: 145px;
+      height: 46px;
+    }
   }
   nav {
     height: 68px;
@@ -17,10 +25,17 @@ header {
     display: flex;
     justify-content: center;
     align-items: center;
+    @media (max-width : 450px) {
+      gap: 26px;
+        height: 55px;
+    }
 
 
     a {
       @include text-24 (#000);
+    @media (max-width : 450px) {
+      @include text-12 (#000);
+    }
     }
   }
 }
