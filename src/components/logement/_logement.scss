@@ -113,7 +113,7 @@
       }
     }
   }
-
+// HOST
 .logement_first_row_host {
   .logement_host {
     display: flex;
@@ -124,7 +124,7 @@
       flex-direction: row;
       position: absolute;
       right: 5%;
-      bottom: 46%;
+      bottom: 18.3em;
     }
 
     .logement_host_name {
@@ -132,8 +132,7 @@
       // RESPONSIVE
       @media (max-width: 450px) {
         @include text-12($color: $main-color);
-        white-space: normal;
-        margin: 0;
+        word-break: break-all;
       }
     }
 
@@ -185,6 +184,10 @@
       @media (max-width : 450px) {
         flex-direction: row;
         order:  2;
+        gap: 5px;
+        flex: 1;
+        margin-bottom: 24px;
+        margin-top: 10px;
       }
 
       .logement_tags_item {
@@ -202,7 +205,7 @@
         @media (max-width : 450px) {
           padding : 0 25px;
           height: auto;
-          margin-bottom: 20px;
+          margin: 0;
         }
       }
     }
@@ -230,7 +233,6 @@
       width: 100%;
     }
   }
-
   .menu_button {
     width: 582px;
     margin : auto 0;

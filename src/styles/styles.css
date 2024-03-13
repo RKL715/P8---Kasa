@@ -489,7 +489,7 @@ footer .footerContent img {
     flex-direction: row;
     position: absolute;
     right: 5%;
-    bottom: 46%;
+    bottom: 18.3em;
   }
 }
 .logement .logement_first_row_host .logement_host .logement_host_name {
@@ -502,8 +502,7 @@ footer .footerContent img {
     color: #FF6060;
     font-size: 12px;
     font-weight: 400;
-    white-space: normal;
-    margin: 0;
+    word-break: break-all;
   }
 }
 .logement .logement_first_row_host .logement_host .logement_host_pic {
@@ -553,6 +552,10 @@ footer .footerContent img {
   .logement .logement_second_row .logement_tags {
     flex-direction: row;
     order: 2;
+    gap: 5px;
+    flex: 1;
+    margin-bottom: 24px;
+    margin-top: 10px;
   }
 }
 .logement .logement_second_row .logement_tags .logement_tags_item {
@@ -573,7 +576,7 @@ footer .footerContent img {
   .logement .logement_second_row .logement_tags .logement_tags_item {
     padding: 0 25px;
     height: auto;
-    margin-bottom: 20px;
+    margin: 0;
   }
 }
 .logement .logement_third_row {
