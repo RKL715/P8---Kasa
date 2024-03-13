@@ -319,12 +319,30 @@ footer .footerContent img {
   font-size: 288px;
   font-weight: 700;
 }
+@media (max-width: 450px) {
+  .error h1 {
+    font-size: 96px;
+    margin-top: 113px;
+    margin-bottom: 0;
+  }
+}
 .error .oups {
   padding-top: 139px;
   color: #FF6060;
   font-size: 36px;
   font-weight: 500;
   text-align: center;
+}
+@media (max-width: 450px) {
+  .error .oups {
+    color: #FF6060;
+    font-size: 18px;
+    font-weight: 700;
+    font-weight: 500;
+    white-space: pre-line;
+    margin: 113px 52px;
+    padding-top: 0;
+  }
 }
 .error .accueil {
   padding-top: 139px;
@@ -335,6 +353,15 @@ footer .footerContent img {
   font-weight: 500;
   text-decoration-line: underline;
   text-align: center;
+}
+@media (max-width: 450px) {
+  .error .accueil {
+    color: black;
+    font-size: 18px;
+    font-weight: 700;
+    font-weight: 500;
+    padding-top: 0;
+  }
 }
 
 .logement {
@@ -591,6 +618,11 @@ footer .footerContent img {
 @media (max-width: 450px) {
   .logement .logement_third_row .menu_content_container {
     width: 100%;
+  }
+  .logement .logement_third_row .menu_content_container.active {
+    color: black;
+    font-size: 14px;
+    font-weight: 400;
   }
 }
 

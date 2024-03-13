@@ -250,6 +250,9 @@
     // RESPONSIVE
     @media (max-width : 450px) {
       width: 100%;
+      &.active {
+        @include text-14(black);
+      }
     }
   }
 }
