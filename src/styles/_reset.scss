@@ -19,14 +19,15 @@ a {
 
 * {
   box-sizing: border-box;
+
 }
 
 body {
-min-width: 320px;
-  max-width: 1440px;
-  min-height: 100vh;
-  display: flex;
+    min-width: 320px;
+    max-width: 1440px;
+    display: flex;
     flex-direction: column;
+    min-height: 100vh;
   // RESPONSIVE
     @media (max-width : 450px) {
         max-width: 450px;
@@ -34,5 +35,5 @@ min-width: 320px;
 }
 
 #root {
-  flex: 1;
+  min-height: 100vh;
 }
