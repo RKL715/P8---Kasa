@@ -17,6 +17,12 @@ color: $color;
   font-weight: 400;
 }
 
+@mixin text-13 ($color){
+  color: $color;
+  font-size: 14px;
+  font-weight: 700;
+}
+
 @mixin text-12 ($color){
   color: $color;
   font-size: 12px;

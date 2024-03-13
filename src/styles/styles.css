@@ -607,10 +607,22 @@ footer .footerContent img {
 @media (max-width: 450px) {
   .logement .logement_third_row .menu_button {
     width: 100%;
+    color: white;
+    font-size: 14px;
+    font-weight: 700;
   }
 }
 .logement .logement_third_row .menu_button .arrow {
   right: 20px;
+}
+@media (max-width: 450px) {
+  .logement .logement_third_row .menu_button .arrow {
+    transform: scale(0.8);
+    top: 3px;
+  }
+  .logement .logement_third_row .menu_button .arrow.active {
+    transform: scale(0.8) rotate(-180deg);
+  }
 }
 .logement .logement_third_row .menu_content_container {
   width: 582px;

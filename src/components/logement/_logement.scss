@@ -237,10 +237,19 @@
     flex : 0 1 auto;
     @media (max-width : 450px) {
       width: 100%;
+      @include text-13($color: white);
     }
 
     .arrow {
       right: 20px;
+      // RESPONSIVE
+      @media (max-width : 450px) {
+        transform: scale(0.8);
+        top: 3px;
+        &.active {
+          transform: scale(0.8) rotate(-180deg);
+        }
+      }
     }
   }
 
