@@ -13,7 +13,34 @@
     max-width: 450px;
     margin: 0 auto 19px;
   }
+// RESPONSIVE FOR ABOUT/DROPDOWN
+  @media (max-width: 450px) {
+    .menu_container .menu_button {
+      width: 335px;
+      height: 30px;
+      padding: 5px;
+      font-size: 13px;
+      font-weight: 700;
+
+      .arrow {
+        transform: scale(0.8);
+        right: 40px;
+        top: 0;
+        &.active {
+          transform: scale(0.8) rotate(-180deg);
+        }
+        }
+    }
+    .menu_content_container {
+     width: 335px !important;
+      &.active {
+        @include text-14(black);
+      }
+
+    }
+  }
 }
 
 
 //control the about page style
+// Cheat with !important cause of the default dropdown style at width 1023px

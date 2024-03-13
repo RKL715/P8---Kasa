@@ -287,6 +287,31 @@ footer .footerContent img {
     margin: 0 auto 19px;
   }
 }
+@media (max-width: 450px) {
+  .about .menu_container .menu_button {
+    width: 335px;
+    height: 30px;
+    padding: 5px;
+    font-size: 13px;
+    font-weight: 700;
+  }
+  .about .menu_container .menu_button .arrow {
+    transform: scale(0.8);
+    right: 40px;
+    top: 0;
+  }
+  .about .menu_container .menu_button .arrow.active {
+    transform: scale(0.8) rotate(-180deg);
+  }
+  .about .menu_content_container {
+    width: 335px !important;
+  }
+  .about .menu_content_container.active {
+    color: black;
+    font-size: 14px;
+    font-weight: 400;
+  }
+}
 
 .error h1 {
   color: #FF6060;
