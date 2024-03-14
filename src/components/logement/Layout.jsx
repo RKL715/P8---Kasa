@@ -18,16 +18,17 @@ const {name, picture} = host;
                 </div>
             </div>
 
-            <div className={'logement_first_row_host'}>
-                <div className={'logement_host'}>
-                    <p className={'logement_host_name'}>{name}</p>
-                    <img className={'logement_host_pic'} src={picture} alt={name}/>
-                </div>
-            </div>
+
+
+
 </div>
             <div className={'logement_second_row'}>
                 <div className={'logement_tags'}>{tags.map((tag, index) => (<div key={index} className={'logement_tags_item'}>{tag}</div>)) }</div>
-                <div><Stars rating={rating}/>
+                <div className={'logement_rating_and_host'}><Stars rating={rating}/>
+                    <div className={'logement_host'}>
+                        <p className={'logement_host_name'}>{name}</p>
+                        <img className={'logement_host_pic'} src={picture} alt={name}/>
+                    </div>
                 </div>
             </div>
 
