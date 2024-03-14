@@ -1,3 +1,5 @@
+@import "../../styles/mixins";
+
 .banner-background { // Background
   position : relative;
   max-width: 1240px;
@@ -5,6 +7,12 @@
   flex-shrink: 0;
   border-radius: 25px;
   margin : 0 auto 50px;
+  // RESPONSIVE
+    @media (max-width: 450px) {
+      width: 335px;
+      height: 111px;
+      margin: 0 auto;
+    }
   &::before { // Overlay
     content: "";
     position: absolute;
@@ -16,12 +24,22 @@
     background: #000;
     mix-blend-mode: darken;
     border-radius: 25px;
+    // RESPONSIVE
+    @media (max-width: 450px) {
+      width: 335px;
+      height: 111px;
+    }
   }
   .banner { // Image
     min-width: fit-content;
     height: 223px;
     border-radius: 25px;
     object-fit: cover;
+    // RESPONSIVE
+    @media (max-width: 450px) {
+      min-width: 335px;
+      height: 111px;
+    }
   }
   h1 { // Title
     width: auto;
@@ -37,7 +55,15 @@
     font-style: normal;
     font-weight: 700;
     line-height: 142.6%; /* 68.448px */
+// RESPONSIVE
+    @media (max-width: 450px) {
+      @include text-24(#FFF);
+        font-weight: 700;
+        width: 70%;
+        white-space: normal;
+        left: 40%;
 
+    }
   }
 }
 
@@ -45,24 +71,3 @@
 // background is the background of the banner image. &:: before pseudo-element helps to create the darken effect.
 // .banner is the image itself.
 // h1 is the title of the banner. Font is inside _reset.scss
-
-// RESPONSIVE DESIGN
-
-// 375px
-
-@media (max-width: 375px) {
-  .banner-background {
-    width: 335px;
-    height: 111px;
-    .banner {
-      width: 335px;
-      height: 111px;
-    }
-    h1 {
-      width: 70%;
-      white-space: normal;
-      left: 40%;
-      font-size: 24px;
-      line-height: 100%;    }
-  }
-}

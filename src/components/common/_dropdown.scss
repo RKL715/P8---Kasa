@@ -3,7 +3,7 @@
 
 .menu_container {
   position: relative;
-  display: inline-block;
+  flex : 0 1 auto;
 
   .menu_button {
     background-color: $main-color;
@@ -18,7 +18,8 @@
     cursor: pointer;
     @include text-24(white);
     font-weight: 700;
-z-index: 1;
+    z-index: 1;
+    flex : 0 1 auto;
     .arrow {
         position: absolute;
         right: 60px;
