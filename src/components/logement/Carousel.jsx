@@ -5,6 +5,7 @@ import {useState} from "react";
 const ImageSlider = ({pictures, title}) => {
     const [currentIndex, setCurrentIndex] = useState(0);
 
+// FONCTION POUR LES BOUTONS
     const nextSlide = () => {
         setCurrentIndex((prevIndex) => (prevIndex + 1) % pictures.length);
     } // Donne au CurrentIndex la valeur de prevIndex + 1 modulo la longueur de pictures.
@@ -16,6 +17,16 @@ const ImageSlider = ({pictures, title}) => {
         else
         setCurrentIndex((prevIndex) => (prevIndex - 1) % pictures.length);
     } // Sinon donne à currentIndex la valeur de prevIndex - 1 modulo la longueur de pictures.
+
+// SI PICTURES = 1 = PAS DE BOUTON ni de counter
+    if (pictures.length <= 1) {
+        return (
+            <div className={'logement_carousel'}>
+                <div className={'logement_carousel_slide'}>
+                    <img src={pictures[currentIndex]} alt={title[currentIndex]}/>
+                </div>
+            </div>)
+    }
 
     return (
         <div className={'logement_carousel'}>
