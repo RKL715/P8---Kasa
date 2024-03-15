@@ -5,12 +5,12 @@
   display: flex;
   flex-direction: column;
   margin: 0 100px;
-    // RESPONSIVE
-    @media (max-width : 450px) {
-        margin: 0 20px;
-    }
+  // RESPONSIVE
+  @media (max-width: 450px) {
+    margin: 0 20px;
+  }
 
-//CAROUSEL CONTAINER
+  //CAROUSEL CONTAINER
   .logement_carousel {
     position: relative;
     min-width: fit-content;
@@ -18,12 +18,12 @@
     margin: 0 0 30px 0;
     z-index: 0;
     // RESPONSIVE
-    @media (max-width : 450px) {
-    width: 335px;
-    margin: 0 auto 15px;
+    @media (max-width: 450px) {
+      width: 335px;
+      margin: 0 auto 15px;
     }
 
-//CAROUSEL BUTTONS
+    //CAROUSEL BUTTONS
     .carousel_button {
       position: absolute;
       z-index: 1;
@@ -32,41 +32,43 @@
       cursor: pointer;
       outline: none;
       // RESPONSIVE
-      @media (max-width : 450px) {
-      height: 50px;
+      @media (max-width: 450px) {
+        height: 50px;
       }
     }
-      #prev {
-        left : 3%;
-        top: 45%;
-      }
-      #next {
-        right : 3%;
-        top: 45%;
-        transform: rotate(180deg);
-      }
 
-//CAROUSEL COUNTER
-      .logement_carousel_number {
-        position : absolute;
-        z-index: 1;
-        bottom : 25px;
-        left : 45%;
-        @include text-18(white);
-        font-weight: 500;
-      }
+    #prev {
+      left: 3%;
+      top: 45%;
+    }
+
+    #next {
+      right: 3%;
+      top: 45%;
+      transform: rotate(180deg);
+    }
+
+    //CAROUSEL COUNTER
+    .logement_carousel_number {
+      position: absolute;
+      z-index: 1;
+      bottom: 25px;
+      left: 45%;
+      @include text-18(white);
+      font-weight: 500;
+    }
   }
 
-// CAROUSEL SLIDES
+  // CAROUSEL SLIDES
   .logement_carousel_slide {
     border-radius: 10px;
     max-width: 1240px;
     height: 415px;
     flex-shrink: 1;
-    margin : 0 auto;
+    margin: 0 auto;
     // RESPONSIVE
-    @media (max-width : 450px) {
-    height: 255px;
+    @media (max-width: 450px) {
+      height: 255px;
     }
 
     img {
@@ -78,12 +80,13 @@
   }
 
 
-// LOGEMENT INFOS - TITLE, LOCATION, HOST
- .logement_first_row {
-   display: flex;
-   flex-direction: row;
+  // LOGEMENT INFOS - TITLE, LOCATION, HOST
+  .logement_first_row {
+    display: flex;
+    flex-direction: row;
     justify-content: space-between;
- }
+  }
+
   .logement_first_row_infos {
     display: flex;
     justify-content: space-between;
@@ -113,42 +116,8 @@
       }
     }
   }
-// HOST
-.logement_first_row_host {
-  .logement_host {
-    display: flex;
-    align-items: center;
-    float: right;
-    //RESPONSIVE
-    @media (max-width: 450px) {
-      flex-direction: row;
-      position: absolute;
-      right: 5%;
-      bottom: 18.3em;
-    }
 
-    .logement_host_name {
-      @include text-14($color: $main-color);
-      // RESPONSIVE
-      @media (max-width: 450px) {
-        @include text-12($color: $main-color);
-        word-break: break-all;
-      }
-    }
 
-    .logement_host_pic {
-      width: 64px;
-      height: 64px;
-      border-radius: 50%;
-      margin-left: 10px;
-      // RESPONSIVE
-      @media (max-width: 450px) {
-        width: 32px;
-        height: 32px;
-      }
-    }
-  }
-}
 
 
 // LOGEMENT VALUES - RATING, TAGS
@@ -156,24 +125,68 @@
     margin-top: 20px;
     display: flex;
     justify-content: space-between;
+    position: relative;
     // RESPONSIVE
     @media (max-width : 450px) {
       flex-direction: column-reverse;
       margin-top: 0;
     }
-    .logement_rating {
-      display : flex;
+
+    .logement_rating_and_host {
+      display: flex;
       flex-direction: row;
-      gap : 15px;
-    .star {
-      height: auto;
-      width: auto;
-        // RESPONSIVE
-        @media (max-width : 450px) {
-          transform: scale(0.8);
-          width: 10px;
+      justify-content: space-between;
+      .logement_rating {
+        display: flex;
+        flex-direction: row;
+        width: fit-content;
+        gap: 15px;
+        .star {
+          height: auto;
+          width: auto;
+          // RESPONSIVE
+          @media (max-width: 450px) {
+            transform: scale(0.8);
+            width: 10px;
+          }
         }
-}
+      }
+
+      // HOST
+      .logement_host {
+        display: flex;
+        align-items: center;
+        float: right;
+        position: absolute;
+        bottom: 80px;
+        width: fit-content;
+        //RESPONSIVE
+        @media (max-width: 450px) {
+          position: static;
+          flex-direction: row;
+        }
+
+        .logement_host_name {
+          @include text-14($color: $main-color);
+          // RESPONSIVE
+          @media (max-width: 450px) {
+            @include text-12($color: $main-color);
+            word-break: break-all;
+          }
+        }
+
+        .logement_host_pic {
+          width: 64px;
+          height: 64px;
+          border-radius: 50%;
+          margin-left: 10px;
+          // RESPONSIVE
+          @media (max-width: 450px) {
+            width: 32px;
+            height: 32px;
+          }
+        }
+      }
     }
 
     .logement_tags {
@@ -209,6 +222,7 @@
         }
       }
     }
+
   }
 
 // LOGEMENT DROPDOWN - Description, Equipements
