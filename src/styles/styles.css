@@ -177,10 +177,11 @@ footer .footerContent img {
   height: 223px;
   border-radius: 25px;
   object-fit: cover;
+  width: 100%;
 }
 @media (max-width: 450px) {
   .banner-background .banner {
-    min-width: 335px;
+    min-width: 100%;
     height: 111px;
   }
 }
