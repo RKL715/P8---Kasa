@@ -125,6 +125,7 @@
     margin-top: 20px;
     display: flex;
     justify-content: space-between;
+    position: relative;
     // RESPONSIVE
     @media (max-width : 450px) {
       flex-direction: column-reverse;
@@ -157,7 +158,7 @@
         align-items: center;
         float: right;
         position: absolute;
-        bottom: 410px;
+        bottom: 80px;
         width: fit-content;
         //RESPONSIVE
         @media (max-width: 450px) {

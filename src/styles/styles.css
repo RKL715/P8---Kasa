@@ -28,7 +28,7 @@ body {
 }
 @media (max-width: 450px) {
   body {
-    max-width: 450px;
+    width: 100%;
   }
 }
 
@@ -284,7 +284,7 @@ footer .footerContent img {
 }
 @media (max-width: 450px) {
   .about {
-    max-width: 450px;
+    max-width: 100vh;
     margin: 0 auto 19px;
   }
 }
@@ -483,6 +483,7 @@ footer .footerContent img {
   margin-top: 20px;
   display: flex;
   justify-content: space-between;
+  position: relative;
 }
 @media (max-width: 450px) {
   .logement .logement_second_row {
@@ -516,7 +517,7 @@ footer .footerContent img {
   align-items: center;
   float: right;
   position: absolute;
-  bottom: 410px;
+  bottom: 80px;
   width: fit-content;
 }
 @media (max-width: 450px) {
