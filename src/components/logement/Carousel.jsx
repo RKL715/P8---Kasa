@@ -3,7 +3,7 @@ import {useState} from "react";
 
 // ImageSlider component
 const ImageSlider = ({pictures, title}) => {
-    const [currentIndex, setCurrentIndex] = useState(0);
+    const [currentIndex, setCurrentIndex] = useState(0); // utilise le hook useState pour créer une variable d'état currentIndex et une fonction setCurrentIndex pour mettre à jour cette variable.
 
 // FONCTION POUR LES BOUTONS
     const nextSlide = () => {
@@ -26,7 +26,7 @@ const ImageSlider = ({pictures, title}) => {
                     <img src={pictures[currentIndex]} alt={title[currentIndex]}/>
                 </div>
             </div>)
-    }
+    } // Si la longueur de pictures est inférieure ou égale à 1, retourne le carousel sans les boutons ni le counter.
 
     return (
         <div className={'logement_carousel'}>

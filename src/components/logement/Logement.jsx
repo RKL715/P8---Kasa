@@ -5,17 +5,17 @@ import Error from "../error/Error.jsx";
 
 
 const Logement = () => {
-    const {id} = useParams() // use the useParams hook to get the id of the logement
+    const {id} = useParams() // Utilise le hook useParams pour obtenir l'id du logement
     {
 
-        const logementExistence = logementData.find((logement) => logement.id === id)
-        if (logementExistence) {
-            let logement = logementData.find((logement) => logement.id === id) // use the find method to find the logement with the id that matches the id from the useParams hook;
+        let logement = logementData.find((logement) => logement.id === id) // Utilise la méthode find pour trouver le logement avec l'id qui correspond à l'id du hook useParams;
+
+        if (logement) {  // Si le logement est trouvé, renvoie le logement
             return (
                 <div>
                     <div>
                         <Layout
-                            key={logement.id}  // Key : To identify which items have changed, are added, or are removed.
+                            key={logement.id}  // Key : Pour identifier chaque logement de manière unique dans la liste de logements et pour identifier les changements dans la liste de logements.
                             pictures={logement.pictures}
                             title={logement.title}
                             location={logement.location}
@@ -31,7 +31,7 @@ const Logement = () => {
         }
        else  {
             return (
-                <Error />
+                <Error />  // Si le logement n'est pas trouvé, renvoie la page d'erreur
             )
         }
 
