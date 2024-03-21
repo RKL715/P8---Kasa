@@ -1,13 +1,13 @@
 import Card from "./Card.jsx";
-import logementData from '/public/logements.json' // import the logementData from the logements.json file
+import logementData from '/public/logements.json'
 
 const Gallery = () => {
     return (
         <div className={"gallery-background"}>
             <div className={"gallery"}>
-            {logementData.map((logement) => (  // map through the logementData array and render a Card component for each logement
+            {logementData.map((logement) => (  // Map dans logementData et retourne une carte pour chaques entrées
                 <Card
-                    key={logement.id}  // Key : To identify which items have changed, are added, or are removed.
+                    key={logement.id}  // Key : Pour identifier chaque logement de manière unique dans la liste de logements et pour identifier les changements dans la liste de logements.
                     id={logement.id}
                     figcaption={logement.title}
                     alt={logement.title}

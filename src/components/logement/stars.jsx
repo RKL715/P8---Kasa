@@ -36,3 +36,6 @@ Stars.propTypes = {
 
 
 
+// Ligne 22 : On compare l'index avec la valeur de rating pour savoir si on doit afficher une étoile pleine ou vide.
+// Si l'index de l'étoile est inférieur à la valeur de rating = étoile pleine, car elle se trouve avant la position indiquée par la note.
+// Si l'index de l'étoile est supérieur ou égal à la valeur de rating = étoile vide, puisqu'elle est après la position indiquée par la note.

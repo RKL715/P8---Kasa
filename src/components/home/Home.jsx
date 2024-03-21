@@ -1,4 +1,4 @@
-import Banner from "../common/Banner.jsx";
+import Banner from "../common/banner/Banner.jsx";
 import Gallery from "./Gallery.jsx";
 
 function Home() {

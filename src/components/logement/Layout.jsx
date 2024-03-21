@@ -1,5 +1,5 @@
 import PropTypes from "prop-types";
-import Dropdown from "../common/Dropdown.jsx";
+import Dropdown from "../common/dropdown/Dropdown.jsx";
 import Stars from "./stars.jsx";
 import ImageSlider from "./Carousel.jsx";
 function Layout ({pictures, title, location, host, rating, tags, description,equipments})  {
