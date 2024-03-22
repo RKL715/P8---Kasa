@@ -37,22 +37,23 @@ body {
 }
 
 header {
-  margin: 45px 6em 50px;
+  margin: 45px auto;
   display: flex;
   justify-content: space-between;
-  max-width: 1240px;
+  align-items: center;
+  width: 86%;
   height: 68px;
 }
 @media (max-width: 450px) {
   header {
     height: 46px;
-    margin: 20px 7% 27px;
+    margin: 20px auto;
   }
 }
 header img {
-  width: 210.322px;
+  width: min(80%, max(100%, 6vw));
   height: 68px;
-  flex-shrink: 0;
+  flex-shrink: 1;
 }
 @media (max-width: 450px) {
   header img {
@@ -61,22 +62,14 @@ header img {
   }
 }
 header nav {
-  height: 68px;
-  gap: 57px;
   display: flex;
-  justify-content: center;
-  align-items: center;
-}
-@media (max-width: 450px) {
-  header nav {
-    gap: 26px;
-    height: 55px;
-  }
+  width: 50%;
+  justify-content: flex-end;
+  gap: 15%;
+  height: auto;
 }
 header nav a {
-  color: #000;
-  font-size: 24px;
-  font-weight: 500;
+  font-size: min(24px, max(12px, 4vw));
   white-space: nowrap;
 }
 @media (max-width: 450px) {
@@ -90,7 +83,7 @@ header nav a {
 footer {
   display: flex;
   margin: 0 auto;
-  max-width: 1240px;
+  width: 86%;
   min-height: 100%;
   padding: 66px 464px 29px 463px;
   flex-direction: column;
@@ -141,15 +134,15 @@ footer .footerContent img {
 
 .banner-background {
   position: relative;
-  max-width: 1240px;
+  width: 86%;
   height: 223px;
   flex-shrink: 0;
   border-radius: 25px;
   margin: 0 auto 50px;
+  z-index: 0;
 }
 @media (max-width: 450px) {
   .banner-background {
-    width: 335px;
     height: 111px;
     margin: 0 auto;
   }
@@ -168,55 +161,53 @@ footer .footerContent img {
 }
 @media (max-width: 450px) {
   .banner-background::before {
-    width: 335px;
     height: 111px;
   }
 }
 .banner-background .banner {
-  min-width: fit-content;
   height: 223px;
   border-radius: 25px;
   object-fit: cover;
-  width: 100%;
+  min-width: 100%;
 }
 @media (max-width: 450px) {
   .banner-background .banner {
-    min-width: 100%;
     height: 111px;
   }
 }
 .banner-background h1 {
-  width: auto;
+  width: 100%;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  white-space: nowrap;
+  top: 35%;
+  z-index: 1;
+  white-space: pre-wrap;
   color: #FFF;
   text-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
   -webkit-text-stroke-color: #000;
-  font-size: 48px;
+  font-size: min(48px, max(16px, 6vw));
   font-style: normal;
   font-weight: 700;
-  line-height: 142.6%; /* 68.448px */
+  line-height: 142.6%;
 }
 @media (max-width: 450px) {
   .banner-background h1 {
-    color: #FFF;
-    font-size: 24px;
-    font-weight: 500;
-    white-space: nowrap;
-    font-weight: 700;
+    font-size: min(24px, max(20px, 6vw));
     width: 70%;
     white-space: normal;
-    left: 40%;
+    top: 20%;
+    left: 10%;
+    text-align: left;
   }
 }
 
 .gallery-background {
   border-radius: 25px;
   background: #F6F6F6;
-  max-width: 1240px;
+  width: 86%;
   height: auto;
   margin: 0 auto 50px auto;
 }
@@ -245,10 +236,17 @@ footer .footerContent img {
   display: flex;
   flex-direction: column-reverse;
   text-align: left;
-  max-width: 340px;
+  width: 340px;
   height: 340px;
   border-radius: 10px;
   contain: content;
+}
+@media (max-width: 450px) {
+  .gallery-background .gallery figure {
+    height: auto;
+    overflow: hidden;
+    max-width: 100%;
+  }
 }
 .gallery-background .gallery figure img {
   position: relative;
@@ -257,6 +255,13 @@ footer .footerContent img {
   height: 340px;
   border-radius: 10px;
   object-fit: cover;
+}
+@media (max-width: 450px) {
+  .gallery-background .gallery figure img {
+    width: auto;
+    display: block;
+    max-width: 100%;
+  }
 }
 .gallery-background .gallery figure figcaption {
   padding: 20px;
