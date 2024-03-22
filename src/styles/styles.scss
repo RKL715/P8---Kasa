@@ -1,11 +1,11 @@
 @import "_variables";
 @import "_reset";
 @import "_mixins";
-@import "../components/common/header";
-@import "../components/common/footer";
-@import "../components/common/banner";
+@import "../components/common/header/header";
+@import "../components/common/footer/footer";
+@import "../components/common/banner/banner";
 @import "../components/home/gallery";
 @import "../components/about/about";
 @import "../components/error/error";
 @import "../components/logement/logement";
-@import "../components/common/dropdown";
+@import "../components/common/dropdown/dropdown";

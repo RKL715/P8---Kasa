@@ -1,15 +1,16 @@
-@import "../../styles/mixins";
+@import "../../../styles/mixins";
 
 .banner-background { // Background
   position : relative;
-  max-width: 1240px;
+  //max-width: 1240px;
+  width: 86%;
   height: 223px;
   flex-shrink: 0;
   border-radius: 25px;
   margin : 0 auto 50px;
+  z-index: 0;
   // RESPONSIVE
     @media (max-width: 450px) {
-      width: 335px;
       height: 111px;
       margin: 0 auto;
     }
@@ -26,43 +27,47 @@
     border-radius: 25px;
     // RESPONSIVE
     @media (max-width: 450px) {
-      width: 335px;
       height: 111px;
     }
   }
   .banner { // Image
-    min-width: fit-content;
     height: 223px;
     border-radius: 25px;
     object-fit: cover;
-    width: 100%;
+    min-width: 100%;
     // RESPONSIVE
     @media (max-width: 450px) {
-      min-width: 100%;
       height: 111px;
     }
   }
+
+  // TITRE
   h1 { // Title
-    width: auto;
+    width: 100%;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    white-space: nowrap;
+    top: 35%;
+    z-index: 1;
+    white-space: pre-wrap;
     color: #FFF;
     text-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
     -webkit-text-stroke-color: #000;
-    font-size: 48px;
+    font-size: calc(min(48px, max(16px, 6vw)));
     font-style: normal;
     font-weight: 700;
-    line-height: 142.6%; /* 68.448px */
+    line-height: 142.6%;
 // RESPONSIVE
     @media (max-width: 450px) {
-      @include text-24(#FFF);
-        font-weight: 700;
+      font-size: calc(min(24px, max(20px, 6vw)));
         width: 70%;
         white-space: normal;
-        left: 40%;
+        top: 20%;
+        left: 10%;
+        text-align: left;
+
 
     }
   }

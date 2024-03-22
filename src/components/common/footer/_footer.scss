@@ -1,10 +1,10 @@
-@import "../../styles/mixins";
+@import "../../../styles/mixins";
 
 
   footer { // Black background
     display: flex;
     margin : 0 auto;
-    max-width: 1240px;
+    width: 86%;
     min-height: 100%;
     padding: 66px 464px 29px 463px;
     flex-direction: column;

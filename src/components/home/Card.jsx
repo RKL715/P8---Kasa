@@ -4,7 +4,7 @@
     function Card({alt, image, figcaption, id}) {
         const navigate = useNavigate() // utilise useNavigate hook pour naviguer vers une autre page
         const handleClick = () => { // créer une fonction handleClick qui utilise le navigate hook pour naviguer vers la page Logement avec l'id du logement
-            navigate('/Logement/' + id)
+            navigate('/Logement/' + id) // Navigue vers la page Logement avec l'id du logement
         }
       return (
           <div className={'card-handle'} onClick={handleClick}> {/* ajoute un div avec une classe de card-handle et un onClick event qui appelle la fonction handleClick */}

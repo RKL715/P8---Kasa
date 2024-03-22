@@ -1,6 +1,6 @@
 import Layout from "./Layout.jsx";
-import logementData from '/public/logements.json' // import the logementData from the logements.json file
-import {useParams} from "react-router-dom"; // import the useParams hook from react-router-dom
+import logementData from '/public/logements.json'
+import {useParams} from "react-router-dom";
 import Error from "../error/Error.jsx";
 
 

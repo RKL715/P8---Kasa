@@ -3,7 +3,7 @@
 .gallery-background {
   border-radius: 25px;
   background: #F6F6F6;
-  max-width: 1240px;
+  width: 86%;
   height: auto;
   margin: 0 auto 50px auto;
   // RESPONSIVE
@@ -30,10 +30,16 @@ figure {
   display: flex;
   flex-direction: column-reverse;
   text-align: left;
-  max-width: 340px;
+  width: 340px;
   height: 340px;
   border-radius: 10px;
   contain: content;
+  // RESPONSIVE
+    @media (max-width : 450px) {
+      height: auto;
+      overflow: hidden;
+      max-width: 100%;
+    }
 
   img {
     position: relative;
@@ -42,6 +48,12 @@ figure {
     height: 340px;
     border-radius: 10px;
     object-fit: cover;
+    // RESPONSIVE
+    @media (max-width : 450px) {
+      width: auto;
+      display: block;
+      max-width: 100%;
+    }
   }
   figcaption {
     padding : 20px;
