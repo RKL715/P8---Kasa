@@ -1,6 +1,6 @@
-@import "_variables";
-@import "_reset";
-@import "_mixins";
+@import "partial/variables";
+@import "partial/reset";
+@import "partial/mixins";
 @import "../components/header/header";
 @import "../components/footer/footer";
 @import "../components/banner/banner";
