@@ -1,10 +1,10 @@
-import Home from "./components/home/Home.jsx";
-import About from "./components/about/About.jsx";
-import Error from "./components/error/Error.jsx";
-import Logement from "./components/logement/Logement.jsx";
+import Home from "./pages/home/Home.jsx";
+import About from "./pages/about/About.jsx";
+import Error from "./pages/error/Error.jsx";
+import Logement from "./pages/logement/Logement.jsx";
 import {BrowserRouter, Route, Routes} from "react-router-dom";
-import Header from "./components/common/header/Header.jsx";
-import Footer from "./components/common/footer/Footer.jsx";
+import Header from "./components/header/Header.jsx";
+import Footer from "./components/footer/Footer.jsx";
 
 function App() {
     return (

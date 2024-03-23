@@ -1,5 +1,5 @@
-import Banner from "../common/banner/Banner.jsx";
-import Dropdown from "../common/dropdown/Dropdown.jsx";
+import Banner from "../../components/banner/Banner.jsx";
+import Dropdown from "../../components/dropdown/Dropdown.jsx";
 function About() {
     return (
         <div>

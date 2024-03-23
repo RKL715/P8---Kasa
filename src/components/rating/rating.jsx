@@ -15,7 +15,7 @@ const fullStar = <svg width="25" height="24" viewBox="0 0 25 24" fill="none" xml
 </svg>
 
 
-export default function Stars({rating}) {
+export default function Rating({rating}) {
     const stars = Array.from({length: 5}, (_, index) => {
         return (
             <div key={index} className={'star'}>
@@ -30,7 +30,7 @@ export default function Stars({rating}) {
         </div>
     )
 }
-Stars.propTypes = {
+Rating.propTypes = {
     rating: PropTypes.oneOfType([PropTypes.string, PropTypes.number]).isRequired
 }
 
