@@ -1,4 +1,4 @@
-import Card from "./Card.jsx";
+import Card from "../card/Card.jsx";
 import logementData from '/public/logements.json'
 
 const Gallery = () => {

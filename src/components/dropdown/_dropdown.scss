@@ -1,5 +1,5 @@
-@import "../../../styles/mixins";
-@import "../../../styles/variables";
+@import "../../styles/partial/mixins";
+@import "../../styles/partial/variables";
 
 .menu_container {
   position: relative;
@@ -55,8 +55,8 @@
       opacity: 0;
     }
   50% {
-        transform: translateY(-10px);
-    opacity: 0.3%;
+        transform: translateY(-5px);
+    opacity: 0;
     }
     100% {
         transform: translateY(0px);

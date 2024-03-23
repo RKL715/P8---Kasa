@@ -1,12 +1,13 @@
-@import "../../../styles/mixins";
+@import "../../styles/partial/mixins";
 
 
   footer { // Black background
     display: flex;
     margin : 0 auto;
-    width: 86%;
+    width: 100%;
+    overflow: hidden;
     min-height: 100%;
-    padding: 66px 464px 29px 463px;
+    padding: 5%;
     flex-direction: column;
     align-items: center;
     background-color: black;
@@ -14,8 +15,7 @@
     top: 100%;
     // RESPONSIVE
     @media (max-width : 450px) {
-      padding: 66px 120px 58px 120px;
-      width: 100%;
+      padding: 15%;
     }
 
 
