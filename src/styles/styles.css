@@ -244,33 +244,38 @@ footer .footerContent img {
 @media (max-width: 450px) {
   .about {
     max-width: 100vh;
-    margin: 0 auto 19px;
+    margin-top: 30%;
   }
+}
+.about .menu_container .menu_button {
+  max-width: 1023px;
+  width: 70vw;
 }
 @media (max-width: 450px) {
   .about .menu_container .menu_button {
-    width: 335px;
-    height: 30px;
-    padding: 5px;
-    font-size: 13px;
-    font-weight: 700;
+    max-height: 50px;
+    height: 7vw;
+    font-size: 4vw;
+    align-items: center;
   }
-  .about .menu_container .menu_button .arrow {
-    transform: scale(0.8);
-    right: 40px;
+}
+@media (max-width: 450px) {
+  .about .menu_container .menu_button .arrow.inactive {
+    height: 1vw;
     top: 0;
+    align-self: center;
   }
+}
+@media (max-width: 450px) {
   .about .menu_container .menu_button .arrow.active {
-    transform: scale(0.8) rotate(-180deg);
+    height: 1vw;
+    top: 30px;
+    align-self: center;
   }
-  .about .menu_content_container {
-    width: 335px !important;
-  }
-  .about .menu_content_container.active {
-    color: black;
-    font-size: 14px;
-    font-weight: 400;
-  }
+}
+.about .menu_content_container.active {
+  max-width: 1023px;
+  width: 70vw;
 }
 
 .error h1 {
