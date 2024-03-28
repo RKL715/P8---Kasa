@@ -24,30 +24,25 @@
       font-size: 4vw;
       align-items: center;
     }
-    .arrow.inactive {
+    .arrow {
       @media (max-width: 450px) {
-        height: 1vw;
-        top : 0;
-        align-self: center;
-      }
-    }
-    .arrow.active {
-      @media (max-width: 450px) {
-        height: 1vw;
-        top : 30px;
-        align-self: center;
-      }
 
+        float: right;
+        transform: scale(0.8);
+        right: 50px;
+        &.active {
+          transform: scale(0.8) rotate(-180deg);
+        }
+      }
     }
   }
-
-
 
 .menu_content_container.active {
     max-width: 1023px;
     width: 70vw;
 }
 }
+
 
 
 //control the about page style

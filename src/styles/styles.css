@@ -260,17 +260,13 @@ footer .footerContent img {
   }
 }
 @media (max-width: 450px) {
-  .about .menu_container .menu_button .arrow.inactive {
-    height: 1vw;
-    top: 0;
-    align-self: center;
+  .about .menu_container .menu_button .arrow {
+    float: right;
+    transform: scale(0.8);
+    right: 50px;
   }
-}
-@media (max-width: 450px) {
   .about .menu_container .menu_button .arrow.active {
-    height: 1vw;
-    top: 30px;
-    align-self: center;
+    transform: scale(0.8) rotate(-180deg);
   }
 }
 .about .menu_content_container.active {
