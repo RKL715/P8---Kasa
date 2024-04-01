@@ -4,7 +4,7 @@ function About() {
     return (
         <div>
 
-            <Banner imgSrc='../public/bannerabout.png' text=' '/>
+            <Banner imgSrc='/bannerabout.png' text=' '/>
             <div className={'about'}>
                 <div>
                     <Dropdown name={'Fiabilité'} text={'Les annonces postées sur Kasa garantissent une fiabilité totale. Les photos sont conformes aux logements, et toutes les informations sont régulièrement vérifiées par nos équipes.'}/>

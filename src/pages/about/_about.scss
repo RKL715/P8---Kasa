@@ -16,8 +16,6 @@
 
 
   .menu_container .menu_button  {
-    max-width: 1023px;
-    width: 70vw;
     @media (max-width: 450px) {
       max-height: 50px;
       height: 7vw;
@@ -36,11 +34,6 @@
       }
     }
   }
-
-.menu_content_container.active {
-    max-width: 1023px;
-    width: 70vw;
-}
 }
 
 

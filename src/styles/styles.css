@@ -247,10 +247,6 @@ footer .footerContent img {
     margin-top: 30%;
   }
 }
-.about .menu_container .menu_button {
-  max-width: 1023px;
-  width: 70vw;
-}
 @media (max-width: 450px) {
   .about .menu_container .menu_button {
     max-height: 50px;
@@ -268,10 +264,6 @@ footer .footerContent img {
   .about .menu_container .menu_button .arrow.active {
     transform: scale(0.8) rotate(-180deg);
   }
-}
-.about .menu_content_container.active {
-  max-width: 1023px;
-  width: 70vw;
 }
 
 .error h1 {
@@ -345,7 +337,7 @@ footer .footerContent img {
 @media (max-width: 861px) {
   .logement .logement_carousel {
     margin: 0 auto 15px;
-    width: 90%;
+    width: 100%;
   }
 }
 .logement .logement_carousel .carousel_button {
@@ -359,6 +351,11 @@ footer .footerContent img {
 @media (max-width: 861px) {
   .logement .logement_carousel .carousel_button {
     height: 50px;
+  }
+}
+@media (max-width: 450px) {
+  .logement .logement_carousel .carousel_button {
+    height: 24px;
   }
 }
 .logement .logement_carousel #prev {
@@ -379,6 +376,11 @@ footer .footerContent img {
   font-size: 18px;
   font-weight: 700;
   font-weight: 500;
+}
+@media (max-width: 450px) {
+  .logement .logement_carousel .logement_carousel_number {
+    display: none;
+  }
 }
 .logement .logement_carousel_slide {
   border-radius: 10px;
@@ -578,12 +580,12 @@ footer .footerContent img {
   }
 }
 .logement .logement_third_row .menu_button {
-  width: 582px;
+  width: 40vw;
+  max-width: 582px;
   margin: auto 0;
   flex: 0 1 auto;
-  max-width: 100%;
 }
-@media (max-width: 1363px) {
+@media (max-width: 1365px) {
   .logement .logement_third_row .menu_button {
     width: 40vw;
   }
@@ -617,12 +619,26 @@ footer .footerContent img {
   }
 }
 .logement .logement_third_row .menu_content_container {
-  width: 582px;
+  Width: 40vw;
+  max-width: 582px;
   margin: auto 0;
+}
+@media (max-width: 1365px) {
+  .logement .logement_third_row .menu_content_container {
+    width: 40vw;
+  }
+}
+@media (max-width: 999px) {
+  .logement .logement_third_row .menu_content_container {
+    max-width: 80vw;
+    min-width: 70vw;
+  }
 }
 @media (max-width: 861px) {
   .logement .logement_third_row .menu_content_container {
     width: 100%;
+    max-width: unset;
+    min-width: unset;
   }
   .logement .logement_third_row .menu_content_container.active {
     color: black;
@@ -637,7 +653,8 @@ footer .footerContent img {
 }
 .menu_container .menu_button {
   background-color: #FF6060;
-  width: 1023px;
+  width: 60vw;
+  max-width: 1023px;
   color: white;
   display: flex;
   padding: 10px;
@@ -663,7 +680,8 @@ footer .footerContent img {
   transform: rotate(-180deg);
 }
 .menu_container .menu_content_container {
-  width: 1023px;
+  width: 60vw;
+  max-width: 1023px;
   margin-left: auto;
   margin-right: auto;
   padding: 20px;
