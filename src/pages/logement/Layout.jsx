@@ -2,8 +2,23 @@ import PropTypes from "prop-types";
 import Dropdown from "../../components/dropdown/Dropdown.jsx";
 import Rating from "../../components/rating/rating.jsx";
 import ImageSlider from "../../components/carousel/Carousel.jsx";
-function Layout ({pictures, title, location, host, rating, tags, description,equipments})  {
-const {name, picture} = host;
+import {useEffect, useState} from "react";
+function Layout ({pictures, title, location, host, rating, tags, description,equipments}) {
+    const {name, picture} = host;
+    const [windowWidth, setWindowWidth] = useState(window.innerWidth); // Crée une variable d'état windowWidth et une fonction setWindowWidth qui prend en paramètre la largeur de la fenêtre
+
+    // Fonction useEffect pour mettre à jour la largeur de la fenêtre et afficher le nom et la photo de l'hôte en fonction de la largeur de la fenêtre
+    useEffect(() => { // Utilise la fonction useEffect pour mettre à jour la largeur de la fenêtre
+        const handleResize = () => {
+            setWindowWidth(window.innerWidth);
+        }; // Crée une fonction handleResize qui met à jour la largeur de la fenêtre
+
+        window.addEventListener('resize', handleResize); // Ajoute un écouteur d'événements pour redimensionner la fenêtre
+
+        return () => {
+            window.removeEventListener('resize', handleResize); // Supprime l'écouteur d'événements pour redimensionner la fenêtre
+        };
+    }, []); // Utilise un tableau vide pour que la fonction useEffect ne s'exécute qu'une seule fois
 
     return (
         <div className={'logement'}>
@@ -16,16 +31,27 @@ const {name, picture} = host;
                         <h1 className={'logement_title'}>{title}</h1>
                         <p className={'logement_location'}>{location}</p>
                     </div>
+
+                    {windowWidth > 700 ? ( // Si la largeur de la fenêtre est supérieure à 700
+                        <div className={'logement_host_desktop'}>
+                            <p className={'logement_host_name_desktop'}>{name}</p>
+                            <img className={'logement_host_pic_desktop'} src={picture} alt={name}/>
+                        </div>
+                    ) : null }
                 </div>
             </div>
 
             <div className={'logement_second_row'}> {/* Crée une div pour la deuxième ligne */}
                 <div className={'logement_tags'}>{tags.map((tag, index) => (<div key={index} className={'logement_tags_item'}>{tag}</div>)) }</div>
                 <div className={'logement_rating_and_host'}><Rating rating={rating}/>
-                    <div className={'logement_host'}>
-                        <p className={'logement_host_name'}>{name}</p>
-                        <img className={'logement_host_pic'} src={picture} alt={name}/>
+
+                    {windowWidth <= 700 ? ( // Si la largeur de la fenêtre est inférieure ou égale à 700
+                    <div className={'logement_host_mobile'}>
+                        <p className={'logement_host_name_mobile'}>{name}</p>
+                        <img className={'logement_host_pic_mobile'} src={picture} alt={name}/>
                     </div>
+                    ) : null}
+
                 </div>
             </div>
 
@@ -40,6 +66,7 @@ const {name, picture} = host;
         </div>
     )
 }
+
 
 Layout.propTypes = {
     pictures: PropTypes.array.isRequired,

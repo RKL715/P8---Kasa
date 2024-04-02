@@ -9,7 +9,7 @@ const Dropdown = ({name, text}) => {
     return (
         <div className={"menu_container"}>
             <button onClick={onClick} className={`menu_button`}>{name}
-                <p className={`arrow ${isActive ? 'active' : 'inactive'}`}><img src={"../public/arrow.png"} alt="arrow dropdown"/></p>
+                <p className={`arrow ${isActive ? 'active' : 'inactive'}`}><img src={"/arrow.png"} alt="arrow dropdown"/></p>
             </button>
             <div ref={dropdownRef} className={`menu_content_container ${isActive ? 'active' : 'inactive'}`}> {/* 'ref' pour attacher une référence à un élément du DOM. Si isActive ok, alors on passe la class Active */}
                 {Array.isArray(text) ? (

@@ -6,7 +6,7 @@
   flex-direction: column;
   margin: 0 100px;
   // RESPONSIVE
-  @media (max-width: 861px) {
+  @media (max-width: 700px) {
     margin: 0 20px;
   }
 
@@ -18,9 +18,9 @@
     margin: 0 0 30px 0;
     z-index: 0;
     // RESPONSIVE
-    @media (max-width: 861px) {
+    @media (max-width: 700px) {
       margin: 0 auto 15px;
-      width: 90%;
+      width: 100%;
     }
 
     //CAROUSEL BUTTONS
@@ -32,8 +32,12 @@
       cursor: pointer;
       outline: none;
       // RESPONSIVE
-      @media (max-width: 861px) {
+      @media (max-width: 700px) {
         height: 50px;
+      }
+      // RESPONSIVE
+      @media (max-width: 450px) {
+        height: 24px;
       }
     }
 
@@ -56,6 +60,10 @@
       left: 45%;
       @include text-18(white);
       font-weight: 500;
+      // RESPONSIVE
+      @media (max-width: 450px) {
+        display: none;
+      }
     }
   }
 
@@ -66,10 +74,10 @@
     height: 415px;
     flex-shrink: 1;
     margin: 0 auto;
-     //RESPONSIVE
-    @media (max-width: 861px) {
+    //RESPONSIVE
+    @media (max-width: 700px) {
       max-height: 415px;
-        height: 10vh;
+      height: 10vh;
       min-height: 315px;
       width: 100%;
     }
@@ -85,16 +93,35 @@
 
   // LOGEMENT INFOS - TITLE, LOCATION, HOST
   .logement_first_row {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
+    .logement_host_desktop {
+      display :none;
+    @media (min-width : 700px) {
+      display: flex;
+      flex-direction: row;
+      justify-content: right;
+      .logement_host_name_desktop {
+        @include text-14($color: $main-color);
+        display: flex;
+        align-items: center;
+        padding-right: 5px;
+        white-space: nowrap;
+      }
+      .logement_host_pic_desktop {
+        width: 64px;
+        height: 64px;
+        border-radius: 50%;
+      }
+      }
+    }
   }
+
+
 
   .logement_first_row_infos {
     display: flex;
     justify-content: space-between;
     // RESPONSIVE
-    @media (max-width: 861px) {
+    @media (max-width: 700px) {
       flex-direction: column;
     }
 
@@ -106,11 +133,12 @@
           width: 99%;
         }
       }
+
       .logement_location {
         @include text-18($color: black);
         font-weight: 500;
         // RESPONSIVE
-        @media (max-width: 861px) {
+        @media (max-width: 700px) {
           @include text-14($color: black);
           margin-top: 10px;
         }
@@ -119,16 +147,14 @@
   }
 
 
-
-
-// LOGEMENT VALUES - RATING, TAGS
+  // LOGEMENT VALUES - RATING, TAGS
   .logement_second_row {
     margin-top: 20px;
     display: flex;
     justify-content: space-between;
     position: relative;
     // RESPONSIVE
-    @media (max-width : 861px) {
+    @media (max-width: 700px) {
       flex-direction: column-reverse;
       margin-top: 0;
     }
@@ -137,16 +163,19 @@
       display: flex;
       flex-direction: row;
       justify-content: space-between;
+
       .logement_rating {
         display: flex;
         flex-direction: row;
         width: fit-content;
         gap: 15px;
+        align-items: center;
+
         .star {
           height: auto;
           width: auto;
           // RESPONSIVE
-          @media (max-width: 861px) {
+          @media (max-width: 700px) {
             transform: scale(0.8);
             width: 10px;
           }
@@ -154,57 +183,39 @@
       }
 
       // HOST
-      .logement_host {
-        display: flex;
-        align-items: center;
-        float: right;
-        position: absolute;
-        bottom: 80px;
-        width: fit-content;
-        //RESPONSIVE
-        //@media (max-width: 794px) {
-        // margin-bottom: 5%;
-        //}
-        //@media (max-width: 606px) {
-        //  margin-bottom: 15%;
-        //}
-        @media (max-width: 861px) {
-          position: static;
+       .logement_host_mobile {
+         display : none;
+         @media (max-width: 700px) {
+          display: flex;
           flex-direction: row;
-          margin-bottom: unset;
-        }
-
-        .logement_host_name {
-          @include text-14($color: $main-color);
-          // RESPONSIVE
-          @media (max-width: 861px) {
-            @include text-12($color: $main-color);
-            word-break: break-all;
-          }
-        }
-
-        .logement_host_pic {
-          width: 64px;
-          height: 64px;
-          border-radius: 50%;
-          margin-left: 10px;
-          // RESPONSIVE
-          @media (max-width: 861px) {
-            width: 32px;
-            height: 32px;
-          }
-        }
-      }
+           .logement_host_name_mobile {
+               @include text-12($color: $main-color);
+               word-break: break-all;
+               display: flex;
+               align-items: center;
+           }
+           .logement_host_pic_mobile {
+             width: 32px;
+             height: 32px;
+             border-radius: 50%;
+             margin-left: 10px;
+           }
+         }
+       }
     }
 
+
+        // TAGS
     .logement_tags {
       display: flex;
       gap: 10px;
+
       flex-wrap: wrap;
+      align-items: center;
       // RESPONSIVE
-      @media (max-width : 861px) {
+      @media (max-width: 700px) {
         flex-direction: row;
-        order:  2;
+        order: 2;
         gap: 5px;
         flex: 1;
         margin-bottom: 24px;
@@ -218,13 +229,12 @@
         min-width: fit-content;
         padding: 15px 25px;
         height: 25px;
-        margin-top: 10px;
         display: flex;
         justify-content: center;
         align-items: center;
         // RESPONSIVE
-        @media (max-width : 861px) {
-          padding : 0 25px;
+        @media (max-width: 700px) {
+          padding: 0 25px;
           height: auto;
           margin: 0;
         }
@@ -233,8 +243,8 @@
 
   }
 
-// LOGEMENT DROPDOWN - Description, Equipements
-.logement_third_row {
+  // LOGEMENT DROPDOWN - Description, Equipements
+  .logement_third_row {
     margin-top: 25px;
     display: flex;
     justify-content: space-between;
@@ -242,65 +252,76 @@
     max-width: 100%;
     flex-wrap: wrap;
     // RESPONSIVE
-    @media (max-width : 999px) {
+    @media (max-width: 999px) {
       justify-content: center;
     }
-  @media (max-width : 861px) {
-    flex-direction: column;
-    margin-bottom: 20px;
-  }
-
-  .menu_container {
-    margin-top: 20px;
-    flex : 0 1 auto;
-    // RESPONSIVE
-    @media (max-width : 861px) {
-      width: 100%;
-    }
-  }
-  .menu_button {
-    width: 582px;
-    margin : auto 0;
-    flex : 0 1 auto;
-    max-width: 100%;
-    @media (max-width: 1363px) {
-      width: 40vw;
-    }
-    @media (max-width: 999px) {
-      max-width: 80vw;
-      min-width: 70vw;
-    }
-    @media (max-width : 861px) {
-      width: 100%;
-      max-width: unset;
-        min-width: unset;
-      @include text-13($color: white);
+    @media (max-width: 700px) {
+      flex-direction: column;
+      margin-bottom: 20px;
     }
 
-    .arrow {
-      right: 20px;
+    .menu_container {
+      margin-top: 20px;
+      flex: 0 1 auto;
       // RESPONSIVE
-      @media (max-width : 861px) {
-        transform: scale(0.8);
-        top: 3px;
+      @media (max-width: 700px) {
+        width: 100%;
+      }
+    }
+
+    .menu_button {
+      width: 40vw;
+      max-width: 582px;
+      margin: auto 0;
+      flex: 0 1 auto;
+      @media (max-width: 1365px) {
+        width: 40vw;
+      }
+      @media (max-width: 999px) {
+        max-width: 80vw;
+        min-width: 75vw;
+      }
+      @media (max-width: 700px) {
+        width: 100%;
+        max-width: unset;
+        min-width: unset;
+        @include text-13($color: white);
+      }
+
+      .arrow {
+        right: 20px;
+        // RESPONSIVE
+        @media (max-width: 700px) {
+          transform: scale(0.8);
+          top: 3px;
+          &.active {
+            transform: scale(0.8) rotate(-180deg);
+          }
+        }
+      }
+    }
+
+    .menu_content_container {
+      Width: 40vw;
+      max-width: 582px;
+      margin: auto 0;
+      // RESPONSIVE
+      @media (max-width: 1365px) {
+        width: 40vw;
+      }
+      @media (max-width: 999px) {
+        max-width: 80vw;
+        min-width: 75vw;
+      }
+      @media (max-width: 700px) {
+        width: 100%;
+        max-width: unset;
+        min-width: unset;
         &.active {
-          transform: scale(0.8) rotate(-180deg);
+          @include text-14(black);
         }
       }
     }
   }
-
-  .menu_content_container {
-    width: 582px;
-    margin : auto 0;
-    // RESPONSIVE
-    @media (max-width : 861px) {
-      width: 100%;
-      &.active {
-        @include text-14(black);
-      }
-    }
-  }
-}
 }
 
