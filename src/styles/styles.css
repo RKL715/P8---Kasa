@@ -418,12 +418,13 @@ footer .footerContent img {
     font-weight: 400;
     display: flex;
     align-items: center;
+    padding-right: 5px;
+    white-space: nowrap;
   }
   .logement .logement_first_row .logement_host_desktop .logement_host_pic_desktop {
     width: 64px;
     height: 64px;
     border-radius: 50%;
-    margin-left: 10px;
   }
 }
 .logement .logement_first_row_infos {
