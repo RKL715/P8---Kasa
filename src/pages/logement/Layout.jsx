@@ -7,6 +7,7 @@ function Layout ({pictures, title, location, host, rating, tags, description,equ
     const {name, picture} = host;
     const [windowWidth, setWindowWidth] = useState(window.innerWidth); // Crée une variable d'état windowWidth et une fonction setWindowWidth qui prend en paramètre la largeur de la fenêtre
 
+    // Fonction useEffect pour mettre à jour la largeur de la fenêtre et afficher le nom et la photo de l'hôte en fonction de la largeur de la fenêtre
     useEffect(() => { // Utilise la fonction useEffect pour mettre à jour la largeur de la fenêtre
         const handleResize = () => {
             setWindowWidth(window.innerWidth);
@@ -31,7 +32,7 @@ function Layout ({pictures, title, location, host, rating, tags, description,equ
                         <p className={'logement_location'}>{location}</p>
                     </div>
 
-                    {windowWidth > 700 ? ( // Si la largeur de la fenêtre est supérieure à 861px
+                    {windowWidth > 700 ? ( // Si la largeur de la fenêtre est supérieure à 700
                         <div className={'logement_host_desktop'}>
                             <p className={'logement_host_name_desktop'}>{name}</p>
                             <img className={'logement_host_pic_desktop'} src={picture} alt={name}/>
@@ -44,7 +45,7 @@ function Layout ({pictures, title, location, host, rating, tags, description,equ
                 <div className={'logement_tags'}>{tags.map((tag, index) => (<div key={index} className={'logement_tags_item'}>{tag}</div>)) }</div>
                 <div className={'logement_rating_and_host'}><Rating rating={rating}/>
 
-                    {windowWidth <= 700 ? ( // Si la largeur de la fenêtre est inférieure ou égale à 861px
+                    {windowWidth <= 700 ? ( // Si la largeur de la fenêtre est inférieure ou égale à 700
                     <div className={'logement_host_mobile'}>
                         <p className={'logement_host_name_mobile'}>{name}</p>
                         <img className={'logement_host_pic_mobile'} src={picture} alt={name}/>
