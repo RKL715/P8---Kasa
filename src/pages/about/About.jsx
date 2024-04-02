@@ -2,7 +2,7 @@ import Banner from "../../components/banner/Banner.jsx";
 import Dropdown from "../../components/dropdown/Dropdown.jsx";
 function About() {
     return (
-        <div>
+        <div className={'main_about'}>
 
             <Banner imgSrc='/bannerabout.png' text=' '/>
             <div className={'about'}>
