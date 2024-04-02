@@ -483,6 +483,7 @@ footer .footerContent img {
   flex-direction: row;
   width: fit-content;
   gap: 15px;
+  align-items: center;
 }
 .logement .logement_second_row .logement_rating_and_host .logement_rating .star {
   height: auto;
@@ -521,6 +522,7 @@ footer .footerContent img {
   display: flex;
   gap: 10px;
   flex-wrap: wrap;
+  align-items: center;
 }
 @media (max-width: 700px) {
   .logement .logement_second_row .logement_tags {
@@ -541,7 +543,6 @@ footer .footerContent img {
   min-width: fit-content;
   padding: 15px 25px;
   height: 25px;
-  margin-top: 10px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -595,7 +596,7 @@ footer .footerContent img {
 @media (max-width: 999px) {
   .logement .logement_third_row .menu_button {
     max-width: 80vw;
-    width: 80vw;
+    min-width: 75vw;
   }
 }
 @media (max-width: 700px) {
@@ -633,7 +634,7 @@ footer .footerContent img {
 @media (max-width: 999px) {
   .logement .logement_third_row .menu_content_container {
     max-width: 80vw;
-    width: 80vw;
+    min-width: 75vw;
   }
 }
 @media (max-width: 700px) {

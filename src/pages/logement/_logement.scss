@@ -169,6 +169,7 @@
         flex-direction: row;
         width: fit-content;
         gap: 15px;
+        align-items: center;
 
         .star {
           height: auto;
@@ -208,7 +209,9 @@
     .logement_tags {
       display: flex;
       gap: 10px;
+
       flex-wrap: wrap;
+      align-items: center;
       // RESPONSIVE
       @media (max-width: 700px) {
         flex-direction: row;
@@ -226,7 +229,6 @@
         min-width: fit-content;
         padding: 15px 25px;
         height: 25px;
-        margin-top: 10px;
         display: flex;
         justify-content: center;
         align-items: center;
@@ -272,13 +274,12 @@
       max-width: 582px;
       margin: auto 0;
       flex: 0 1 auto;
-      //max-width: 100%;
       @media (max-width: 1365px) {
         width: 40vw;
       }
       @media (max-width: 999px) {
         max-width: 80vw;
-        width: 80vw;
+        min-width: 75vw;
       }
       @media (max-width: 700px) {
         width: 100%;
@@ -310,7 +311,7 @@
       }
       @media (max-width: 999px) {
         max-width: 80vw;
-        width: 80vw;
+        min-width: 75vw;
       }
       @media (max-width: 700px) {
         width: 100%;
