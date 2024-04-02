@@ -244,15 +244,21 @@ footer .footerContent img {
 @media (max-width: 450px) {
   .about {
     max-width: 100vh;
-    margin-top: 30%;
+    margin: 0 auto;
   }
 }
-@media (max-width: 450px) {
+@media (max-width: 700px) {
+  .about .menu_container .menu_content_container {
+    width: 80vw;
+  }
+}
+@media (max-width: 700px) {
   .about .menu_container .menu_button {
     max-height: 50px;
     height: 7vw;
     font-size: 4vw;
     align-items: center;
+    width: 80vw;
   }
 }
 @media (max-width: 450px) {
