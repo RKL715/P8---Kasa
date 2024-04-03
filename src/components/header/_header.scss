@@ -29,10 +29,6 @@ header {
     justify-content: flex-end;
     gap: 15%;
     height: auto;
-    // RESPONSIVE
-    @media (max-width : 450px) {
-
-    }
 
 
     a {
@@ -40,6 +36,7 @@ header {
       white-space: nowrap;
     @media (max-width : 450px) {
       @include text-12 (#000);
+      text-transform: uppercase;
     }
     }
   }
