@@ -2,6 +2,11 @@
 
 Initialisation du projet avec Vite.
 
+Run to start the project:
+```bash
+Vite dev
+```
+
 ## Description
 
 Ce projet est principalement pour apprendre React et React Router.
@@ -9,9 +14,9 @@ Ce projet est principalement pour apprendre React et React Router.
 ### Compétences évaluées
 * Configurer la navigation entre les pages de l'app avec React Router.
 * Développer des éléments de l'interface d'un site web avec des composants React.
-* Mettre en oeuvre des animations CSS.
+* Mettre en œuvre des animations CSS.
 * Développer une interface web avec SASS.
-* Initiliser une app avec Create React App ou Vite.
+* Initialiser une app avec Create React App ou Vite.
 
 ## Objectifs
 
@@ -32,7 +37,7 @@ Ce projet est principalement pour apprendre React et React Router.
 
 #### React Router
 
-- [ ] Les paramètres des routes sont géres par React Router dans l'URL pour récupérer les informations de chaque logement.
+- [ ] Les paramètres des routes sont gérées par React Router dans l'URL pour récupérer les informations de chaque logement.
 - [ ] Il existe une page par route.
 - [ ] La page 404 est renvoyées pour chaque route inexistante, ou si une valeur présente dans l'URL ne fait pas partie des données renseignées.
 - [ ] La logique du routeur est réunie dans un seul fichier.
