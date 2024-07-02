@@ -1,4 +1,4 @@
-# Projet 8 - OpenClassrooms - Kasa
+# Formation Intégrateur Web, Open-Classroom. Projet 8. "Kasa"
 
 Initialisation du projet avec Vite.
 
